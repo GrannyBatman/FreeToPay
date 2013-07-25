@@ -30,13 +30,52 @@ html{ width:100%; height:100%; }
 /* =Typography
 --------------------------------------------------------------------------------------------------------*/
 
-body { font-family:Arial,Tahoma, Geneva, sans-serif; font-size:100.01%;min-height:100%;}
+body { font-family:'pt_sansregular', Arial, Tahoma, Geneva, sans-serif; font-size:100.01%;min-height:100%;}
+
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('fonts/PTS55F-webfont.eot');
+    src: url('fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/PTS55F-webfont.woff') format('woff'),
+         url('fonts/PTS55F-webfont.ttf') format('truetype'),
+         url('fonts/PTS55F-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('fonts/PTS75F-webfont.eot');
+    src: url('fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/PTS75F-webfont.woff') format('woff'),
+         url('fonts/PTS75F-webfont.ttf') format('truetype'),
+         url('fonts/PTS75F-webfont.svg#pt_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* End Fonts
 --------------------------------------------------------------------------------------------------------*/
 
+
+/* =Global
+--------------------------------------------------------------------------------------------------------*/
+#mainarea {
+	width: 980px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* =End Global
+--------------------------------------------------------------------------------------------------------*/
+
+
 /* =Header
 --------------------------------------------------------------------------------------------------------*/
+
 
 /* =End Header
 --------------------------------------------------------------------------------------------------------*/
@@ -80,4 +119,202 @@ td {
 }
 
 /* End Tables
+--------------------------------------------------------------------------------------------------------*/
+
+
+
+/* =User Interface Elements
+--------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------- nav-box ---------------*/
+.nav-box {
+	padding: 0 20px;
+	height: 42px;
+	background: #515151;
+	line-height: 1;
+}
+
+#logo {
+	float: left;
+	margin: 11px 40px 0 1px;
+}
+
+
+/*--------------- nav-links-box ---------------*/
+.nav-links-box {	
+	float: left;
+	margin: 10px 0 0 0;
+}
+
+.nav-links-box a {
+	margin-left: 16px;
+	color: #e5e5e5;
+	text-transform: uppercase; 
+	font-size: 10px;
+}
+
+.nav-links-box a:first-child {
+	margin: 0;
+}
+
+.nav-links-box a:hover {
+	color: #b2d234;
+}
+
+
+/*--------------- drop-list-box ---------------*/
+.drop-list-box {
+	position: relative;
+	display: inline-block;	
+}
+
+.nav-box .drop-list-box {
+	margin: 13px 0 0 20px;
+}
+
+.drop-list-wrap {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	z-index: 10;
+	margin-top: 11px;
+	margin-left: -53px;
+	border: 1px solid #e1e1e1;
+	background: #fff; 
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14); 
+	box-shadow: 0 0 8px rgba(0,0,0,.14); 
+}
+
+.scroll-box {
+	overflow: auto;	
+	max-height: 390px;
+}
+
+.drop-list-box-arrow {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	z-index: 1;
+	display: block;
+	margin-left: -15px;
+	width: 30px;
+	height: 12px;
+	background: url(../img/sprite.png) 0 -120px no-repeat;
+}
+
+.drop-list-btn {	
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/sprite.png) 0 0 no-repeat;
+}
+
+.drop-list-btn:hover {
+	background-position: 0 -40px;
+}
+
+.drop-list-box-blue .drop-list-btn:hover {
+	background-position: 0 -80px;
+}
+
+.drop-list {
+	padding: 5px 0;
+}
+
+.drop-list-box-large .drop-list {
+	padding: 12px 0;
+}
+
+.drop-list a {
+	display: block;
+	margin-bottom: 1px;
+	padding: 12px 12px 14px 15px;
+	color: #181818;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 10px;
+	line-height: 1;
+}
+
+.drop-list-box-large .drop-list a {
+	padding: 9px 65px 11px 30px;
+	text-transform: none;
+	font-size: 16px;
+}
+
+.drop-list a:hover {
+	background: #0096ff;
+	color: #fff;
+}
+
+
+/*--------------- user-panel ---------------*/
+.user-panel {
+	float: right;
+	margin: 10px 0 0 0;
+}
+
+.user-panel-login {
+	margin-right: 18px;
+	color: #fff;
+	font-size: 12px;
+}
+
+.user-panel-login:hover {
+	color: #b2d234;
+}
+
+.user-panel-btn {
+	padding-right: 29px;
+	background: url(../img/sprite.png) 100% 3px no-repeat;
+	color: #a8a8a8;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.user-panel-btn:hover {
+	background-position: 100% -37px;
+	color: #b2d234;
+}
+
+
+/*--------------- company-select-box ---------------*/
+.company-select-box {
+	position: relative;
+	padding: 13px 40px 12px 20px;
+	width: 260px;
+	background: #dcdcdc;
+}
+
+.company-select-box small {
+	color: #7e7e7e;
+	text-transform: uppercase; 
+	font-size: 10px;
+}	
+
+.company-select-box-heading a {
+	color: #181818;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 1.1;
+}
+
+.company-select-box-heading a:hover {
+	color: #0095ff;
+}
+
+.company-select-box .drop-list-box {
+	position: absolute;
+	top: 50%;
+	right: 21px;
+	margin-top: -8px;
+}
+
+
+
+
+
+/* End User Interface Elements
 --------------------------------------------------------------------------------------------------------*/
