@@ -3,9 +3,15 @@
 <head> 
     <title>User Interface Elements</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>	
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -14,7 +20,7 @@
 
 		<!-- start nav-box -->
 		<div class="nav-box clearfix">
-			<a href="/" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
+			<a href="#" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
 
 			<div class="nav-links-box">
 				<a href="#">Издатели</a>
@@ -37,16 +43,14 @@
 				</div>
 			</div>
 
-			<div class="user-panel">
-				<a href="#" class="user-panel-login">tgb-bbdo@freetopay.ru</a>
-				<a href="#" class="user-panel-btn">Выйти</a>
-			</div>
+			<a href="#" class="user-btn">Выйти</a>
+			<a href="#" class="user-login">tgb-bbdo@freetopay.ru</a>						
 		</div>
 		<!-- end nav-box -->
 
 		<!-- start company-select-box -->
 		<div class="company-select-box">
-			<small>Кампания</small>
+			<h4 class="select-box-title">Кампания</h4>
 			<h3 class="company-select-box-heading"><a href="#">Планета Sushi в Девичьей Красе</a></h3>
 
 			<div class="drop-list-box drop-list-box-blue drop-list-box-large">
@@ -70,6 +74,115 @@
 			</div>
 		</div>
 		<!-- end company-select-box -->
+		<!-- start filter-box -->
+		<div class="filter-box">
+			<div class="radio-btn-list">
+				<label class="radio-btn"><input type="radio" name="event"><b></b><span>Все события</span></label>
+				<label class="radio-btn"><input type="radio" name="event"><b></b><span>Уникальные события</span></label>
+			</div>
+			
+			<div class="datepicker-list">
+				<div class="datepicker">c <input class="datepicker-btn" type="text" value="2013-03-18" readonly ></div>
+				<div class="datepicker">по <input class="datepicker-btn" type="text" value="2013-04-22" readonly ></div>
+			</div>
+			
+			<div></div>
+
+			<div class="drop-list-box-text">
+				<b>Женщины</b>
+				<div class="drop-list-box drop-list-box-large">
+					<a href="#" class="drop-list-btn"></a>
+					<div class="drop-list-wrap">
+						<div class="scroll-box">
+							<ul class="drop-list">
+								<li><a href="#">Женщины</a></li>
+								<li><a href="#">Мужчины</a></li>
+								<li><a href="#">Дети</a></li>
+							</ul>
+						</div>
+						<span class="drop-list-box-arrow"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="drop-list-box-text">
+				<small>от</small>
+				<b>12</b>
+				<div class="drop-list-box drop-list-box-large">
+					<a href="#" class="drop-list-btn"></a>
+					<div class="drop-list-wrap">
+						<div class="scroll-box">
+							<ul class="drop-list">
+								<li><a href="#">12</a></li>
+								<li><a href="#">13</a></li>
+								<li><a href="#">14</a></li>
+								<li><a href="#">15</a></li>
+								<li><a href="#">16</a></li>
+								<li><a href="#">17</a></li>
+							</ul>
+						</div>
+						<span class="drop-list-box-arrow"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="drop-list-box-text">
+				<small>до</small>
+				<b>60</b>
+				<div class="drop-list-box drop-list-box-large">
+					<a href="#" class="drop-list-btn"></a>
+					<div class="drop-list-wrap">
+						<div class="scroll-box">
+							<ul class="drop-list">
+								<li><a href="#">61</a></li>
+								<li><a href="#">62</a></li>
+								<li><a href="#">63</a></li>
+								<li><a href="#">64</a></li>
+								<li><a href="#">65</a></li>
+								<li><a href="#">66</a></li>
+								<li><a href="#">67</a></li>
+								<li><a href="#">68</a></li>
+								<li><a href="#">69</a></li>
+								<li><a href="#">70</a></li>
+								<li><a href="#">71</a></li>
+								<li><a href="#">72</a></li>
+								<li><a href="#">73</a></li>
+								<li><a href="#">74</a></li>
+								<li><a href="#">75</a></li>								
+							</ul>
+						</div>
+						<span class="drop-list-box-arrow"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="drop-list-box-text">
+				<small>из</small>
+				<b>Любой страны</b>
+				<div class="drop-list-box drop-list-box-large">
+					<a href="#" class="drop-list-btn"></a>
+					<div class="drop-list-wrap">
+						<div class="scroll-box">
+							<ul class="drop-list">
+								<li><a href="#">Украина</a></li>
+								<li><a href="#">Англия</a></li>
+								<li><a href="#">Германия</a></li>
+								<li><a href="#">Россия</a></li>
+								<li><a href="#">Финляндия</a></li>
+							</ul>
+						</div>
+						<span class="drop-list-box-arrow"></span>
+					</div>
+				</div>
+			</div>					
+		</div>
+		<!-- end filter-box -->
+
+		<a href="#" class="filter-btn filter-btn-close">Фильтр<span></span></a>
+		
+		<div class="clear"></div>
+
+
 		
 		<!-- start big-table -->
 		<table class="big-table">
@@ -133,6 +246,11 @@
 		<span class="big-table-button pause"></span>
 		<span class="big-table-button off"></span>
 		<!-- end big-table-button -->
+		<br />
+		<!-- start big-table-button-arrow -->
+		<span class="big-table-button-arrow down"></span>
+		<span class="big-table-button-arrow up"></span>
+		<!-- end big-table-button-arrow -->
 
 		<!-- start switch -->
 		<span class="switch play">
@@ -144,12 +262,7 @@
 			<input class="switcher" type="checkbox" />
 		</span>
 		<!-- end switch -->
-<br />
-		<!-- start big-table-button-arrow -->
-		<span class="big-table-button-arrow down"></span>
-		<span class="big-table-button-arrow up"></span>
-		<!-- end big-table-button-arrow -->
-
+		
 		<!-- start project-control -->
 		<span class="project-control information"></span>
 		<span class="project-control statistics"></span>
@@ -157,6 +270,48 @@
 		<span class="project-control delete red"></span>
 		<span class="project-control off red"></span>
 		<!-- end project-control -->
+
+
+		<!-- start custom-select -->
+		<select name="" id="" class="custom-select">
+			<option value="any">Любой</option>
+			<option value="female">Женский</option>
+			<option value="male">Мужской</option>
+		</select>
+		<!-- end custom-select -->	
+	
+		<!-- start text-input 
+		<div class="text-input">
+			<input type="text">
+			<span>25</span>
+		</div>
+
+		<div class="text-input text-input-zero">
+			<input type="text">
+			<span>0</span>
+		</div>
+
+		<div class="text-input">
+			<input type="text">
+			<small>От 3 до 60 символов</small>
+		</div>
+
+		<div class="text-input text-input-success">
+			<input type="text">
+		</div>
+
+		<div class="text-input text-input-error">
+			<input type="text">
+			<small>Поле не может быть пустым. От 3 до 60 символов</small>
+		</div>
+		end text-input -->
+
+
+
+
+
+
+
 
 
 	</div>

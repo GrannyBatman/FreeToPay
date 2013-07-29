@@ -30,26 +30,49 @@ html{ width:100%; height:100%; }
 /* =Typography
 --------------------------------------------------------------------------------------------------------*/
 
-body { font-family:'pt_sansregular', Arial, Tahoma, Geneva, sans-serif; font-size:100.01%;min-height:100%;}
+body { font-family: 'pt_sansregular', Arial, Tahoma, Geneva, sans-serif; font-size:100.01%;min-height:100%;}
 
 @font-face {
-    font-family: 'pt_sansregular';
-    src: url('fonts/PTS55F-webfont.eot');
-    src: url('fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/PTS55F-webfont.woff') format('woff'),
-         url('fonts/PTS55F-webfont.ttf') format('truetype'),
-         url('fonts/PTS55F-webfont.svg#pt_sansregular') format('svg');
+    font-family: 'pt_sansbold';
+    src: url('fonts/pt_sans-web-bold.eot');
+    src: url('fonts/pt_sans-web-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pt_sans-web-bold.woff') format('woff'),
+         url('fonts/pt_sans-web-bold.ttf') format('truetype'),
+         url('fonts/pt_sans-web-bold.svg#pt_sansbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'pt_sansbold';
-    src: url('fonts/PTS75F-webfont.eot');
-    src: url('fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/PTS75F-webfont.woff') format('woff'),
-         url('fonts/PTS75F-webfont.ttf') format('truetype'),
-         url('fonts/PTS75F-webfont.svg#pt_sansbold') format('svg');
+    font-family: 'pt_sansbold_italic';
+    src: url('fonts/pt_sans-web-bolditalic.eot');
+    src: url('fonts/pt_sans-web-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pt_sans-web-bolditalic.woff') format('woff'),
+         url('fonts/pt_sans-web-bolditalic.ttf') format('truetype'),
+         url('fonts/pt_sans-web-bolditalic.svg#pt_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_sansitalic';
+    src: url('fonts/pt_sans-web-italic.eot');
+    src: url('fonts/pt_sans-web-italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pt_sans-web-italic.woff') format('woff'),
+         url('fonts/pt_sans-web-italic.ttf') format('truetype'),
+         url('fonts/pt_sans-web-italic.svg#pt_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('fonts/pt_sans-web-regular.eot');
+    src: url('fonts/pt_sans-web-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pt_sans-web-regular.woff') format('woff'),
+         url('fonts/pt_sans-web-regular.ttf') format('truetype'),
+         url('fonts/pt_sans-web-regular.svg#pt_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -173,18 +196,26 @@ td {
 	margin: 13px 0 0 20px;
 }
 
+.drop-list-box-text .drop-list-box {
+	bottom: -4px;
+}
+
 .drop-list-wrap {
 	position: absolute;
 	top: 100%;
 	left: 50%;
 	z-index: 10;
+	display: none;
 	margin-top: 11px;
-	margin-left: -53px;
 	border: 1px solid #e1e1e1;
 	background: #fff; 
 	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
 	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14); 
 	box-shadow: 0 0 8px rgba(0,0,0,.14); 
+}
+
+.drop-list-box-text .drop-list-wrap {
+	margin-top: 5px;
 }
 
 .scroll-box {
@@ -211,12 +242,21 @@ td {
 	background: url(../img/sprite.png) 0 0 no-repeat;
 }
 
+.drop-list-box-text .drop-list-btn {
+	background-position: 0 -520px;
+}
+
 .drop-list-btn:hover {
 	background-position: 0 -40px;
 }
 
 .drop-list-box-blue .drop-list-btn:hover {
 	background-position: 0 -80px;
+}
+
+.drop-list-box-text .drop-list-btn:hover,
+.drop-list-box-text:hover .drop-list-btn {
+	background-position: 0 -560px;
 }
 
 .drop-list {
@@ -249,33 +289,60 @@ td {
 	color: #fff;
 }
 
-
-/*--------------- user-panel ---------------*/
-.user-panel {
-	float: right;
-	margin: 10px 0 0 0;
+.drop-list-box-text {
+	display: inline-block;
 }
 
-.user-panel-login {
-	margin-right: 18px;
-	color: #fff;
-	font-size: 12px;
+.drop-list-box-text b {
+	margin-right: 2px;
+	font-weight: normal;
+	font-size: 16px;
 }
 
-.user-panel-login:hover {
-	color: #b2d234;
+.drop-list-box-text:hover b {
+	color: #0096ff;
 }
 
-.user-panel-btn {
-	padding-right: 29px;
-	background: url(../img/sprite.png) 100% 3px no-repeat;
-	color: #a8a8a8;
-	text-transform: uppercase;
+.drop-list-box-text small {
+	margin-right: 10px;
+	color: #64696c;
+	text-transform: uppercase; 
 	font-size: 10px;
 }
 
-.user-panel-btn:hover {
-	background-position: 100% -37px;
+.drop-list-box-text .drop-list a {
+	padding: 9px 40px 11px 40px;
+}
+
+
+/*---------------user-login / user-btn ---------------*/
+.user-login {
+	float: right;
+	display: inline-block;
+	margin: 14px 18px 0 0;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.user-login:hover {
+	color: #b2d234;
+}
+
+.user-btn {
+	float: right;
+	display: inline-block;
+	margin-top: 16px;
+	padding-right: 29px;
+	background: url(../img/sprite.png) 100% 1px no-repeat;
+	color: #a8a8a8;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 1;
+}
+
+.user-btn:hover {
+	background-position: 100% -39px;
 	color: #b2d234;
 }
 
@@ -283,14 +350,21 @@ td {
 /*--------------- company-select-box ---------------*/
 .company-select-box {
 	position: relative;
-	padding: 13px 40px 12px 20px;
-	width: 260px;
-	background: #dcdcdc;
+	float: left;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;
+	padding: 20px 40px 12px 20px;
+	width: 320px;
+	height: 94px;
+	background: #dcdcdc;	
 }
 
-.company-select-box small {
+.select-box-title {
+	margin-bottom: 1px;
 	color: #7e7e7e;
-	text-transform: uppercase; 
+	text-transform: uppercase;
+	font-weight: normal; 
 	font-size: 10px;
 }	
 
@@ -452,8 +526,9 @@ td {
 .switch .switcher {
 	opacity: 0;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 5px;
+	left: 5px;
+	cursor: pointer;
 }
 .switch.pause .background {
 	left: -36px;
@@ -532,6 +607,463 @@ td {
 .project-control.off.red:hover {
 	background: #bd4e6f url(../img/sprite.png) -33px -1914px no-repeat;
 }
+
+/*--------------- filter-box ---------------*/
+.filter-box { 
+	float: left;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box; 
+	padding: 21px 20px 25px 20px;
+	width: 660px;
+	height: 94px;
+	background: #eeeeee;     	
+}
+
+.filter-box-minimized {
+	overflow: hidden;
+	height: 5px;	
+}
+
+.radio-btn-list {
+	float: left;
+	margin-right: 40px;
+}
+
+.radio-btn-list .radio-btn:first-child {
+	margin-right: 14px;
+}
+
+.datepicker-list {
+	display: inline-block;
+}
+
+.filter-box .drop-list-box-text {
+	margin: 8px 7px 0 0;
+}
+
+.filter-btn {
+	float: right;
+	display: block;
+	overflow: hidden;
+	margin-right: 20px;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 38px;
+}
+
+.filter-btn:hover {
+	color: #0096ff;
+}
+
+.filter-btn span {
+	float: right;
+	display: inline-block;
+	margin-left: 10px;
+	width: 36px;
+	height: 36px;
+	background: #eee url(../img/sprite.png) 10px -190px no-repeat;
+}
+
+.filter-btn:hover span {
+	background-position: 10px -270px;
+}
+
+.filter-btn-close span {
+	background-position: 10px -350px;
+}
+
+.filter-btn-close:hover span {
+	background-position: 10px -430px;
+}
+
+
+/*--------------- jQuery-UI datepicker ---------------*/
+.ui-datepicker {
+	margin: 13px 0 0 -100px;
+	padding: 0;
+	width: auto;
+	border: none;
+	border-radius: 0;
+	background: #fff; 
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	box-shadow: 0 0 8px rgba(0,0,0,.14);
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'pt_sansbold', sans-serif !important; 
+}
+
+.ui-datepicker:after {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	z-index: 1;
+	display: block;
+	margin: 0 0 -1px -15px;
+	width: 30px;
+	height: 12px;
+	background: url(../img/sprite.png) 0 -120px no-repeat;
+	content: "";
+}
+
+.ui-datepicker table {
+	margin: 0;
+}
+
+.ui-datepicker thead {
+	display: none;
+}
+
+.ui-datepicker td {
+	padding: 0 !important;
+	border: 1px solid #e1e1e1;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-calendar a {
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	border: none;
+	color: #4d5155;
+	text-align: center;
+	font-size: 14px;
+	line-height: 36px;
+}
+
+.ui-datepicker-calendar a.ui-state-active,
+.ui-datepicker-calendar a.ui-state-hover {
+	border: none;
+	background: #0096ff;
+	color: #fff;
+}
+
+.ui-datepicker .ui-datepicker-other-month a {
+	color: #cccfd3;
+	opacity: 1;
+}
+
+.ui-datepicker .ui-datepicker-other-month a:hover {
+	color: #fff;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	padding: 12px 0;
+	border: none;
+	border: 1px solid #e1e1e1;
+	border-bottom: none;
+	border-radius: 0;
+	background: none;
+	color: #4d5155;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.ui-datepicker-year {
+	color: #a6a6a6;
+	font-weight: normal;
+	font-family: 'pt_sansregular';
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	top: 50%;
+	left: 11px;
+	margin-top: -8px;
+	width: 16px;
+	height: 16px;
+	background: url(../img/sprite.png) 0 -880px no-repeat;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	right: 11px;
+	left: auto;
+	background-position: 0 -920px;	
+}
+
+.ui-datepicker .ui-datepicker-prev:hover {
+	border: none;
+	background-position: 0 -1000px;
+}
+
+.ui-datepicker .ui-datepicker-next:hover {
+	border: none;
+	background-position: 0 -960px;
+}
+
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+	display: none !important;
+}
+
+
+/*--------------- datepicker ---------------*/
+.datepicker {
+	display: inline-block;
+	color: #656a6c;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.datepicker-btn {
+	display: inline-block;
+	width: 65px;
+	height: auto;
+	border: none;
+	color: #000;
+	font-size: 12px;
+	font-family: inherit;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.datepicker-btn:hover,
+.datepicker-btn:focus,
+.datepicker:hover .datepicker-btn {
+	color: #0096ff;
+}
+
+
+/*--------------- radio buttons and checkboxes ---------------*/
+.radio-btn {
+	position: relative;
+	display: inline-block;
+	padding-left: 19px;
+	height: 12px;
+	color: #64696c;
+	text-transform: uppercase; 
+	font-size: 10px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.radio-btn:hover {
+	color: #000;
+}
+
+.radio-btn b {
+	position: absolute;
+	top: -2px;
+	left: 0;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 5px;
+	background: #fff url(../img/sprite.png) 0 -600px no-repeat;
+}
+
+.radio-btn:hover b {
+	background-position: 0 -640px;
+}
+
+.radio-btn input,
+.checkbox-btn input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+}
+
+.radio-btn input:checked + b,
+.radio-btn input:checked ~ span {
+	background-position: 0 -680px;
+	color: #000;
+}
+
+.checkbox-btn {
+	position: relative;
+	display: inline-block;
+	padding-left: 26px;
+	height: 16px;
+	color: #000;
+	font-size: 14px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.checkbox-btn b {
+	position: absolute;
+	top: -1px;
+	left: 0;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/sprite.png) 0 -760px no-repeat;
+}
+
+.checkbox-btn:hover b {
+	background-position: 0 -800px;
+}
+
+.checkbox-btn input:checked + b {
+	background-position: 0 -840px;
+}
+
+.checkbox-btn input[disabled] + b {
+	background-position: 0 -720px;
+}
+
+.checkbox-btn input[disabled] ~ span {
+	color: #b6b6b6;
+}
+
+
+/*--------------- custom-select ---------------*/
+.sbHolder {
+	position: relative;
+	width: 238px;
+	height: 34px;
+	border: 1px solid #c5c5c2;
+	background: #f1f1f1;	
+	font-size: 16px;
+}
+
+.sbHolder:hover {
+	border-color: #0096ff;
+}
+
+.sbSelector {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 34px;
+	outline: none;
+	color: #000;	
+	text-indent: 30px;
+	line-height: 32px;
+}
+
+.sbHolder:hover .sbSelector {
+	background: #fff;
+}
+
+.sbToggle {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	z-index: 1;
+	display: block;
+	width: 36px;
+	height: 36px;
+	outline: none;
+	background: #4e4e4e url(../img/sprite.png) 11px -1977px no-repeat;
+}
+
+.sbHolder:hover .sbToggle {
+	background-color: #0096ff;
+}
+
+.sbOptions {
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	z-index: 1;
+	overflow-y: auto;
+	margin-top: 1px;
+	padding: 8px 0;
+	width: 100%;
+	border: solid 1px #e1e1e1;
+	background-color: #fff; 
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	box-shadow: 0 0 8px rgba(0,0,0,.14); 
+}
+
+.sbOptions li {
+	margin-top: 2px;
+}
+
+.sbOptions li:first-child {
+	margin: 0;
+}
+
+.sbOptions a {
+	display: block;
+	width: 100%;
+	height: 36px;
+	color: #000;
+	text-indent: 30px;
+	line-height: 36px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sbOptions a:hover {
+	background: #0096ff;
+	color: #fff;
+}
+
+
+/*--------------- text inputs ---------------*/
+.text-input {
+	display: inline-block;
+}
+
+.text-input input {
+	width: 240px;
+	font-size: 16px;
+	height: 36px;
+	padding: 0 11px;
+	border: 1px solid #c5c5c2;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box; 
+	font-family: inherit;
+}
+
+.text-input input:hover,
+.text-input input:focus {
+	border-color: #0096ff;
+}
+
+.text-input span {
+	color: #5fbb46; 
+	font-size: 12px;
+	line-height: 36px;
+	margin-left: 12px;
+}
+
+.text-input-zero span {
+	color: #bd4d6f;
+}
+
+.text-input small {
+	color: #8b8b8b; 
+	font-size: 11px;
+	display: block;
+	margin-top: 5px;
+}
+
+.text-input-success input,
+.text-input-success input:hover,
+.text-input-success input:focus {
+	border-color: #60bb46;
+}
+
+.text-input-error input,
+.text-input-error input:hover,
+.text-input-error input:focus {
+	border-color: #bd4e6f;
+}
+
+.text-input-error small {
+	color: #bd4d6f; 
+}
+
+
+
+
 
 
 
