@@ -201,11 +201,11 @@ td {
 }
 
 .drop-list-wrap {
-	display: none;
 	position: absolute;
 	top: 100%;
 	left: 50%;
 	z-index: 10;
+	display: none;
 	margin-top: 11px;
 	border: 1px solid #e1e1e1;
 	background: #fff; 
@@ -294,9 +294,9 @@ td {
 }
 
 .drop-list-box-text b {
-	font-size: 16px;
-	font-weight: normal;
 	margin-right: 2px;
+	font-weight: normal;
+	font-size: 16px;
 }
 
 .drop-list-box-text:hover b {
@@ -304,10 +304,10 @@ td {
 }
 
 .drop-list-box-text small {
-	color: #64696c; 
-	font-size: 10px;
 	margin-right: 10px;
-	text-transform: uppercase;
+	color: #64696c;
+	text-transform: uppercase; 
+	font-size: 10px;
 }
 
 .drop-list-box-text .drop-list a {
@@ -315,32 +315,34 @@ td {
 }
 
 
-/*--------------- user-panel ---------------*/
-.user-panel {
+/*---------------user-login / user-btn ---------------*/
+.user-login {
 	float: right;
-	margin: 10px 0 0 0;
-}
-
-.user-panel-login {
-	margin-right: 18px;
+	display: inline-block;
+	margin: 14px 18px 0 0;
 	color: #fff;
 	font-size: 12px;
+	line-height: 1;
 }
 
-.user-panel-login:hover {
+.user-login:hover {
 	color: #b2d234;
 }
 
-.user-panel-btn {
+.user-btn {
+	float: right;
+	display: inline-block;
+	margin-top: 16px;
 	padding-right: 29px;
-	background: url(../img/sprite.png) 100% 3px no-repeat;
+	background: url(../img/sprite.png) 100% 1px no-repeat;
 	color: #a8a8a8;
 	text-transform: uppercase;
 	font-size: 10px;
+	line-height: 1;
 }
 
-.user-panel-btn:hover {
-	background-position: 100% -37px;
+.user-btn:hover {
+	background-position: 100% -39px;
 	color: #b2d234;
 }
 
@@ -348,19 +350,21 @@ td {
 /*--------------- company-select-box ---------------*/
 .company-select-box {
 	position: relative;
-	padding: 13px 40px 12px 20px;
-	width: 320px;
-	height: 94px;
-	background: #dcdcdc;
 	float: left;
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;   
 	box-sizing: border-box;
+	padding: 20px 40px 12px 20px;
+	width: 320px;
+	height: 94px;
+	background: #dcdcdc;	
 }
 
-.company-select-box small {
+.select-box-title {
+	margin-bottom: 1px;
 	color: #7e7e7e;
-	text-transform: uppercase; 
+	text-transform: uppercase;
+	font-weight: normal; 
 	font-size: 10px;
 }	
 
@@ -384,23 +388,20 @@ td {
 
 
 /*--------------- filter-box ---------------*/
-.filter-box {
-	background: #eeeeee; 
-	float: left;      	
+.filter-box { 
+	float: left;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box; 
+	padding: 21px 20px 25px 20px;
+	width: 660px;
+	height: 94px;
+	background: #eeeeee;     	
 }
 
 .filter-box-minimized {
 	overflow: hidden;
 	height: 5px;	
-}
-
-.filter-wrap {
-	padding: 21px 20px 24px 20px;
-	width: 660px;
-	height: 94px;	
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box;   
-	box-sizing: border-box;
 }
 
 .radio-btn-list {
@@ -421,14 +422,14 @@ td {
 }
 
 .filter-btn {
-	font-size: 10px;
-	text-transform: uppercase;
 	float: right;
-	margin-right: 20px;
 	display: block;
-	line-height: 38px;
 	overflow: hidden;
+	margin-right: 20px;
 	color: #000;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 38px;
 }
 
 .filter-btn:hover {
@@ -436,9 +437,9 @@ td {
 }
 
 .filter-btn span {
-	margin-left: 10px;
-	display: inline-block;
 	float: right;
+	display: inline-block;
+	margin-left: 10px;
 	width: 36px;
 	height: 36px;
 	background: #eee url(../img/sprite.png) 10px -190px no-repeat;
@@ -459,22 +460,21 @@ td {
 
 /*--------------- jQuery-UI datepicker ---------------*/
 .ui-datepicker {
-	font-family: 'pt_sansbold', sans-serif !important;
-	text-transform: uppercase;
-	font-size: 14px;
-	background: #fff;
-	border-radius: 0;
-	border: none;
+	margin: 13px 0 0 -100px;
 	padding: 0;
 	width: auto;
-	margin: 13px 0 0 -100px;
-	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14); 
+	border: none;
+	border-radius: 0;
+	background: #fff; 
 	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
-	box-shadow: 0 0 8px rgba(0,0,0,.14); 
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	box-shadow: 0 0 8px rgba(0,0,0,.14);
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'pt_sansbold', sans-serif !important; 
 }
 
 .ui-datepicker:after {
-	content: "";
 	position: absolute;
 	bottom: 100%;
 	left: 50%;
@@ -484,6 +484,7 @@ td {
 	width: 30px;
 	height: 12px;
 	background: url(../img/sprite.png) 0 -120px no-repeat;
+	content: "";
 }
 
 .ui-datepicker table {
@@ -497,18 +498,18 @@ td {
 .ui-datepicker td {
 	padding: 0 !important;
 	border: 1px solid #e1e1e1;
-	text-align: center;
 	vertical-align: middle;
+	text-align: center;
 }
 
 .ui-datepicker .ui-datepicker-calendar a {
-	font-size: 14px;
-	border: none;
-	color: #4d5155;
-	text-align: center;
 	padding: 0;
 	width: 36px;
 	height: 36px;
+	border: none;
+	color: #4d5155;
+	text-align: center;
+	font-size: 14px;
 	line-height: 36px;
 }
 
@@ -529,51 +530,51 @@ td {
 }
 
 .ui-datepicker .ui-datepicker-header {
-	background: none;
-	border-radius: 0;
-	border: none;
 	padding: 12px 0;
-	color: #4d5155;
+	border: none;
 	border: 1px solid #e1e1e1;
 	border-bottom: none;
+	border-radius: 0;
+	background: none;
+	color: #4d5155;
 }
 
 .ui-datepicker .ui-datepicker-title {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	line-height: 1;
 }
 
 .ui-datepicker-year {
 	color: #a6a6a6;
-	font-family: 'pt_sansregular';
 	font-weight: normal;
+	font-family: 'pt_sansregular';
 }
 
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
-	width: 16px;
 	top: 50%;
-	margin-top: -8px;
 	left: 11px;
+	margin-top: -8px;
+	width: 16px;
 	height: 16px;
 	background: url(../img/sprite.png) 0 -880px no-repeat;
 }
 
 .ui-datepicker .ui-datepicker-next {
-	background-position: 0 -920px;
 	right: 11px;
-	left: auto;	
+	left: auto;
+	background-position: 0 -920px;	
 }
 
 .ui-datepicker .ui-datepicker-prev:hover {
-	background-position: 0 -1000px;
 	border: none;
+	background-position: 0 -1000px;
 }
 
 .ui-datepicker .ui-datepicker-next:hover {
-	background-position: 0 -960px;
 	border: none;
+	background-position: 0 -960px;
 }
 
 .ui-datepicker-prev span,
@@ -584,23 +585,22 @@ td {
 
 /*--------------- datepicker ---------------*/
 .datepicker {
-	font-size: 10px;
-	text-transform: uppercase;
-	color: #656a6c;
 	display: inline-block;
-	line-height: 1;
+	color: #656a6c;
+	text-transform: uppercase;
+	font-size: 10px;
 }
 
 .datepicker-btn {
-	border: none;
+	display: inline-block;
 	width: 65px;
 	height: auto;
-	font-size: 12px;
+	border: none;
 	color: #000;
-	cursor: pointer;
-	display: inline-block;
+	font-size: 12px;
 	font-family: inherit;
 	line-height: 1;
+	cursor: pointer;
 }
 
 .datepicker-btn:hover,
@@ -614,13 +614,13 @@ td {
 .radio-btn {
 	position: relative;
 	display: inline-block;
-	color: #64696c; 
-	font-size: 10px;
-	cursor: pointer;
-	text-transform: uppercase;
-	line-height: 1;
 	padding-left: 19px;
 	height: 12px;
+	color: #64696c;
+	text-transform: uppercase; 
+	font-size: 10px;
+	line-height: 1;
+	cursor: pointer;
 }
 
 .radio-btn:hover {
@@ -629,14 +629,13 @@ td {
 
 .radio-btn b {
 	position: absolute;
-	top: 50%;
+	top: -2px;
 	left: 0;
-	margin-top: -8px;
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	background: #fff url(../img/sprite.png) 0 -600px no-repeat;
 	border-radius: 5px;
+	background: #fff url(../img/sprite.png) 0 -600px no-repeat;
 }
 
 .radio-btn:hover b {
@@ -645,31 +644,34 @@ td {
 
 .radio-btn input,
 .checkbox-btn input {
-	opacity: 0;
 	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: -1;
+	opacity: 0;
 }
 
-.radio-btn input:checked + b {
+.radio-btn input:checked + b,
+.radio-btn input:checked ~ span {
 	background-position: 0 -680px;
+	color: #000;
 }
 
 .checkbox-btn {
 	position: relative;
 	display: inline-block;
+	padding-left: 26px;
+	height: 16px;
 	color: #000;
 	font-size: 14px;
 	line-height: 1;
 	cursor: pointer;
-	height: 16px;
-	padding-left: 27px;
 }
 
 .checkbox-btn b {
 	position: absolute;
-	top: 50%;
+	top: -1px;
 	left: 0;
-	margin-top: -8px;
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -683,6 +685,162 @@ td {
 .checkbox-btn input:checked + b {
 	background-position: 0 -840px;
 }
+
+.checkbox-btn input[disabled] + b {
+	background-position: 0 -720px;
+}
+
+.checkbox-btn input[disabled] ~ span {
+	color: #b6b6b6;
+}
+
+
+/*--------------- custom-select ---------------*/
+.sbHolder {
+	position: relative;
+	width: 238px;
+	height: 34px;
+	border: 1px solid #c5c5c2;
+	background: #f1f1f1;	
+	font-size: 16px;
+}
+
+.sbHolder:hover {
+	border-color: #0096ff;
+}
+
+.sbSelector {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 34px;
+	outline: none;
+	color: #000;	
+	text-indent: 30px;
+	line-height: 32px;
+}
+
+.sbHolder:hover .sbSelector {
+	background: #fff;
+}
+
+.sbToggle {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	z-index: 1;
+	display: block;
+	width: 36px;
+	height: 36px;
+	outline: none;
+	background: #4e4e4e url(../img/sprite.png) 11px -1977px no-repeat;
+}
+
+.sbHolder:hover .sbToggle {
+	background-color: #0096ff;
+}
+
+.sbOptions {
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	z-index: 1;
+	overflow-y: auto;
+	margin-top: 1px;
+	padding: 8px 0;
+	width: 100%;
+	border: solid 1px #e1e1e1;
+	background-color: #fff; 
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	box-shadow: 0 0 8px rgba(0,0,0,.14); 
+}
+
+.sbOptions li {
+	margin-top: 2px;
+}
+
+.sbOptions li:first-child {
+	margin: 0;
+}
+
+.sbOptions a {
+	display: block;
+	width: 100%;
+	height: 36px;
+	color: #000;
+	text-indent: 30px;
+	line-height: 36px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sbOptions a:hover {
+	background: #0096ff;
+	color: #fff;
+}
+
+
+/*--------------- text inputs ---------------*/
+.text-input {
+	display: inline-block;
+}
+
+.text-input input {
+	width: 240px;
+	font-size: 16px;
+	height: 36px;
+	padding: 0 11px;
+	border: 1px solid #c5c5c2;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box; 
+	font-family: inherit;
+}
+
+.text-input input:hover,
+.text-input input:focus {
+	border-color: #0096ff;
+}
+
+.text-input span {
+	color: #5fbb46; 
+	font-size: 12px;
+	line-height: 36px;
+	margin-left: 12px;
+}
+
+.text-input-zero span {
+	color: #bd4d6f;
+}
+
+.text-input small {
+	color: #8b8b8b; 
+	font-size: 11px;
+	display: block;
+	margin-top: 5px;
+}
+
+.text-input-success input,
+.text-input-success input:hover,
+.text-input-success input:focus {
+	border-color: #60bb46;
+}
+
+.text-input-error input,
+.text-input-error input:hover,
+.text-input-error input:focus {
+	border-color: #bd4e6f;
+}
+
+.text-input-error small {
+	color: #bd4d6f; 
+}
+
+
 
 
 

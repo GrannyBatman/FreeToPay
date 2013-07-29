@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	// Подключение custom scroll
+	// --------------- Подключение custom scroll ---------------
 	$(".scroll-box").mCustomScrollbar({
 		scrollInertia: 150, 
 		autoDraggerLength: false,
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	
 
-	// Подключение кадендаря jQuery-UI
+	// --------------- Подключение кадендаря jQuery-UI ---------------
 	$.datepicker.regional['ru'] = {
 		closeText: 'Закрыть',
 		prevText: '&#x3c;Пред',
@@ -42,8 +42,11 @@ $(document).ready(function() {
 
 
 
-	// Выпадающий список
+	// --------------- Выпадающий список ---------------
 	$('.drop-list-btn').on('click', showList);
+	$('.mCSB_scrollTools').on('click', function(event) { event.stopPropagation() });
+	$('.drop-list-wrap').on('click', 'a', hideList);
+	$(document).on('click', function(event) { $('.drop-list-wrap:visible').fadeOut(150) });
 
 	function showList(event) {
 		event.preventDefault();
@@ -52,18 +55,31 @@ $(document).ready(function() {
 		var list = $(this).siblings('.drop-list-wrap');
 
 		if (list.is(':visible')) {
-			list.fadeOut(200);
+			list.fadeOut(150);
 		} else {
 			$('.drop-list-wrap').hide();
 			list.fadeIn(300).css('margin-left', -(list.width() / 2));
-		}
-
-		list.on('click', 'a', function(event) {	list.fadeOut(150) });
-		$(document).on('click', function(event) { list.fadeOut(150) });
+		}		
 	}
 
 
+	function hideList(event) {
+		event.preventDefault();
 
+		if ($(this).closest('.company-select-box').length !== 0) {
+			$('.company-select-box-heading').find('a').text($(this).text());
+			$('.drop-list-wrap:visible').fadeOut(150);
+			return;			
+		}
+
+		$('.drop-list-wrap:visible').fadeOut(150);
+		$(this).closest('.drop-list-box-text').find('b').text($(this).text()); 
+	}	
+
+
+
+	// --------------- Подключение jQuery Selectbox --------------- 
+	$('.custom-select').selectbox({});
 
 
 });
