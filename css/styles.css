@@ -934,6 +934,7 @@ td {
 
 .sbHolder:hover {
 	border-color: #0096ff;
+	background: #fff;
 }
 
 .sbSelector {
@@ -950,8 +951,12 @@ td {
 	line-height: 32px;
 }
 
-.sbHolder:hover .sbSelector {
-	background: #fff;
+.sbSelector.female {	
+	background: url(../img/sprite.png) -68px 8px no-repeat;
+}
+
+.sbSelector.male {
+	background: url(../img/sprite.png) -68px -72px no-repeat;
 }
 
 .sbToggle {
@@ -1011,16 +1016,27 @@ td {
 }
 
 .sbHolder a[rel="female"] {
-	background: #900;
+	background: url(../img/sprite.png) -68px 8px no-repeat;
+}
+
+.sbHolder a[rel="male"] {
+	background: url(../img/sprite.png) -68px -72px no-repeat;
+}
+
+.sbHolder a[rel="female"]:hover {
+	background-color: #0096ff;
+	background-position: -69px -32px;
+}
+
+.sbHolder a[rel="male"]:hover {
+	background-color: #0096ff;
+	background-position: -68px -112px;
 }
 
 
 /*--------------- text inputs ---------------*/
 .text-input {
 	display: inline-block;
-}
-
-.text-input input {
 	width: 240px;
 	font-size: 16px;
 	height: 36px;
@@ -1032,44 +1048,47 @@ td {
 	font-family: inherit;
 }
 
-.text-input input:hover,
-.text-input input:focus {
+.text-input:hover,
+.text-input:focus {
 	border-color: #0096ff;
 }
 
-.text-input span {
+.input-value-length {
 	color: #5fbb46; 
 	font-size: 12px;
 	line-height: 36px;
-	margin-left: 12px;
+	margin-left: 13px;
+	display: inline-block;
+	vertical-align: top;
 }
 
-.text-input-zero span {
+.input-value-error {
 	color: #bd4d6f;
 }
 
-.text-input small {
+.text-input-message {
 	color: #8b8b8b; 
 	font-size: 11px;
 	display: block;
-	margin-top: 5px;
+	margin-top: 9px;
 }
 
-.text-input-success input,
-.text-input-success input:hover,
-.text-input-success input:focus {
+.text-input-warning {
+	color: #bd4d6f;
+}
+
+.text-input-success,
+.text-input-success:hover,
+.text-input-success:focus {
 	border-color: #60bb46;
 }
 
-.text-input-error input,
-.text-input-error input:hover,
-.text-input-error input:focus {
+.text-input-error,
+.text-input-error:hover,
+.text-input-error:focus {
 	border-color: #bd4e6f;
 }
 
-.text-input-error small {
-	color: #bd4d6f; 
-}
 
 
 
