@@ -533,6 +533,12 @@ td {
 .switch.pause .background {
 	left: -36px;
 }
+.switch.yes .background, .switch.no .background {
+	background: url(../img/sprite.png) -200px -1600px no-repeat;
+}
+.switch.no .background {
+	left: -36px;
+}
 
 /*-----big-table-button-----*/
 .big-table-button, .big-table-button-arrow {
