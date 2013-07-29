@@ -3,9 +3,14 @@
 <head> 
     <title>User Interface Elements</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>	
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -70,6 +75,123 @@
 			</div>
 		</div>
 		<!-- end company-select-box -->
+
+		<!-- start filter-box -->
+		<div class="filter-box">
+			<div class="filter-wrap">
+				<div class="radio-btn-list">
+					<label class="radio-btn"><input type="radio" name="event"><b></b>Все события</label>
+					<label class="radio-btn"><input type="radio" name="event"><b></b>Уникальные события</label>
+				</div>
+				
+				<div class="datepicker-list">
+					<div class="datepicker">c <input class="datepicker-btn" type="text" value="2013-03-18" readonly ></div>
+					<div class="datepicker">по <input class="datepicker-btn" type="text" value="2013-04-22" readonly ></div>
+				</div>
+				
+				<div></div>
+
+				<div class="drop-list-box-text">
+					<b>Женщины</b>
+					<div class="drop-list-box drop-list-box-large">
+						<a href="#" class="drop-list-btn"></a>
+						<div class="drop-list-wrap">
+							<div class="scroll-box">
+								<ul class="drop-list">
+									<li><a href="#">Женщины</a></li>
+									<li><a href="#">Мужчины</a></li>
+									<li><a href="#">Дети</a></li>
+								</ul>
+							</div>
+							<span class="drop-list-box-arrow"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="drop-list-box-text">
+					<small>от</small>
+					<b>12</b>
+					<div class="drop-list-box drop-list-box-large">
+						<a href="#" class="drop-list-btn"></a>
+						<div class="drop-list-wrap">
+							<div class="scroll-box">
+								<ul class="drop-list">
+									<li><a href="#">12</a></li>
+									<li><a href="#">13</a></li>
+									<li><a href="#">14</a></li>
+									<li><a href="#">15</a></li>
+									<li><a href="#">16</a></li>
+									<li><a href="#">17</a></li>
+								</ul>
+							</div>
+							<span class="drop-list-box-arrow"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="drop-list-box-text">
+					<small>до</small>
+					<b>60</b>
+					<div class="drop-list-box drop-list-box-large">
+						<a href="#" class="drop-list-btn"></a>
+						<div class="drop-list-wrap">
+							<div class="scroll-box">
+								<ul class="drop-list">
+									<li><a href="#">61</a></li>
+									<li><a href="#">62</a></li>
+									<li><a href="#">63</a></li>
+									<li><a href="#">64</a></li>
+									<li><a href="#">65</a></li>
+									<li><a href="#">66</a></li>
+									<li><a href="#">67</a></li>
+									<li><a href="#">68</a></li>
+									<li><a href="#">69</a></li>
+									<li><a href="#">70</a></li>
+									<li><a href="#">71</a></li>
+									<li><a href="#">72</a></li>
+									<li><a href="#">73</a></li>
+									<li><a href="#">74</a></li>
+									<li><a href="#">75</a></li>								
+								</ul>
+							</div>
+							<span class="drop-list-box-arrow"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="drop-list-box-text">
+					<small>из</small>
+					<b>Любой страны</b>
+					<div class="drop-list-box drop-list-box-large">
+						<a href="#" class="drop-list-btn"></a>
+						<div class="drop-list-wrap">
+							<div class="scroll-box">
+								<ul class="drop-list">
+									<li><a href="#">Украина</a></li>
+									<li><a href="#">Англия</a></li>
+									<li><a href="#">Германия</a></li>
+									<li><a href="#">Россия</a></li>
+									<li><a href="#">Финляндия</a></li>
+								</ul>
+							</div>
+							<span class="drop-list-box-arrow"></span>
+						</div>
+					</div>
+				</div>
+			</div>						
+		</div>
+		<!-- end filter-box -->
+
+		<a href="#" class="filter-btn filter-btn-close">Фильтр<span></span></a>
+		
+		<div class="clear"></div>
+
+
+
+
+
+
+
 
 
 
