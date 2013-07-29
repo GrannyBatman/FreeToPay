@@ -1010,6 +1010,10 @@ td {
 	color: #fff;
 }
 
+.sbHolder a[rel="female"] {
+	background: #900;
+}
+
 
 /*--------------- text inputs ---------------*/
 .text-input {
