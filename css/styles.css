@@ -1081,12 +1081,14 @@ td {
 .text-input-success:hover,
 .text-input-success:focus {
 	border-color: #60bb46;
+	background: url(../img/sprite.png) 100% -111px no-repeat;
 }
 
 .text-input-error,
 .text-input-error:hover,
 .text-input-error:focus {
 	border-color: #bd4e6f;
+	background: url(../img/sprite.png) 100% -191px no-repeat;
 }
 
 
