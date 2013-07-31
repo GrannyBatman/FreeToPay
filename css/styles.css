@@ -455,6 +455,7 @@ td {
 }
 .big-table tbody tr td:active .drop-table, .big-table tbody tr td.active .drop-table {
 	background: url(../img/sprite.png) 0 -1320px no-repeat;
+	background-color: #e1f0fa;
 }
 .table-content tbody tr td {
 	padding-left: 62px;
