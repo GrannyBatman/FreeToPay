@@ -398,7 +398,6 @@ td {
 	padding: 0px 0 0px 19px;
 	color: #7d7d7d;
 	font-size: 12px;
-	width: 288px;
 }
 .big-table thead tr td:hover {
 	background-color: #e1eff9;
@@ -407,11 +406,19 @@ td {
 	display: none;
 	width: 8px;
 	height: 14px;
-	margin-top: -6px;
+	margin-top: -1px;
 	background: url(../img/sort-table.png) no-repeat;
 	position: absolute;
 	top: 50%;
-	right: 5px;
+	right: -4px;
+}
+.big-table thead tr td + td + td .sort-table {
+	right: 7px;
+	margin-top: -3px;
+}
+.big-table thead tr td + td + td + td .sort-table {
+	right: -4px;
+	margin-top: -1px;
 }
 .big-table thead tr td:hover .sort-table {
 	display: inline-block;
@@ -430,10 +437,13 @@ td {
 	background: #fff;
 }
 .big-table tbody tr td {
-	width: 288px;
 	padding: 0px 0 0px 31px;
 	line-height: 12px;
 	cursor: pointer;
+	border: 1px solid #c5c5c1;
+}
+.big-table tbody tr td:last .big-table-line-text.second {
+	float: left;
 }
 .big-table tbody tr td:hover {
 	color: #0096ff;
@@ -447,7 +457,7 @@ td {
 	position: absolute;
 	top: 50%;
 	margin-top: -8px;
-	left: -9px;
+	left: -11px;
 }
 .big-table tbody tr td:hover .drop-table {
 	background-position: 0 -1280px;
@@ -459,6 +469,9 @@ td {
 }
 .table-content tbody tr td {
 	padding-left: 62px;
+	/*border:none;*/
+	border-top: none;
+	border-bottom: none;
 }
 .table-content tbody tr:nth-child(2n+1) {
     background: #f5f8fc;
@@ -471,7 +484,7 @@ td {
 	height: 100%;
 	position: absolute;
 	top: 0px;
-	left: -33px;
+	left: -35px;
 	border-left: 1px solid #c5c5c2;
 }
 .hor-decor {
@@ -480,7 +493,7 @@ td {
 	position: absolute;
 	top: 50%;
 	margin-top: -1px;
-	left: -32px;
+	left: -34px;
 	border-top: 1px solid #c5c5c2;
 }
 .vert-decor.last {
@@ -490,29 +503,43 @@ td {
 .vert-decor.first {
 	height: 50%;
 	top: 50%;
-	left: -2px;
+	left: -4px;
 }
 .big-table-line-text {
-	margin: 0 0 0 36px;
-	width: 230px;
+	margin: 0 0 0 15px;
+	/*width: 187px;*/
 	display: inline-block;
+}
+.big-table-line-text.second {
+	margin-left: 3px;
+	margin-top: 14px;
 }
 .td-wrap-title {
 	position: relative;
-	padding: 14px 20px 14px 0px;
+	/*padding: 14px 20px 14px 0px;*/
+	padding: 10px 20px 0px 0px;
 	display: inline-block;
 }
 .table-content-line-text {
 	display: inline-block;
-	width: 230px;
+	width: 170px;
 }
 .td-wrap {
 	position: relative;
 	padding: 15px 0 17px 0px;
 }
+.big-table tbody tr:nth-child(2n+1) .td-wrap {
+	padding: 15px 0 15px 0px;
+}
 .big-table .table-content-wrap > td {
 	padding: 0;
 }
+.table-content tbody tr .td-wrap {
+	padding: 14px 0 18px 0px !important;
+}
+
+
+
 /*--------big-table-button-switch-----------*/
 .switch {
 	cursor: pointer;
@@ -597,32 +624,32 @@ td {
 	width: 22px;
 	height: 22px;
 	line-height: 22px;
-	background: #fff url(../img/sprite.png) 8px -1756px no-repeat;
+	background: transparent url(../img/sprite.png) 8px -1756px no-repeat;
 	cursor: pointer;
 }
 .project-control.information:hover {
 	background: #0095ff url(../img/sprite.png) -31px -1756px no-repeat;
 }
 .project-control.statistics {
-	background: #fff url(../img/sprite.png) 6px -1793px no-repeat;
+	background: transparent  url(../img/sprite.png) 6px -1793px no-repeat;
 }
 .project-control.statistics:hover {
 	background: #0095ff url(../img/sprite.png) -34px -1793px no-repeat;
 }
 .project-control.editing {
-	background: #fff url(../img/sprite.png) 7px -1833px no-repeat;
+	background: transparent  url(../img/sprite.png) 7px -1833px no-repeat;
 }
 .project-control.editing:hover {
 	background: #0095ff url(../img/sprite.png) -33px -1833px no-repeat;
 }
 .project-control.delete {
-	background: #fff url(../img/sprite.png) 8px -1872px no-repeat;
+	background: transparent  url(../img/sprite.png) 8px -1872px no-repeat;
 }
 .project-control.delete:hover {
 	background: #0095ff url(../img/sprite.png) -32px -1872px no-repeat;
 }
 .project-control.off {
-	background: #fff url(../img/sprite.png) 7px -1914px no-repeat;
+	background: transparent  url(../img/sprite.png) 7px -1914px no-repeat;
 }
 .project-control.off:hover {
 	background: #0095ff url(../img/sprite.png) -33px -1914px no-repeat;
@@ -1357,6 +1384,9 @@ td {
 	border-left-color: transparent;
 	border-right-color: transparent;
 	padding: 0 20px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;
 }
 
 .project-view:hover {
@@ -1592,12 +1622,113 @@ a.secondary-nav-active {
 	display: block;
 }
 
-
-
-
-
-
-
-
 /* End User Interface Elements
 --------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------------
+start vk_index
+-----------------------------------------------------------------------------------------------------------*/
+#mainarea {
+	overflow: hidden;
+}
+.company-wrap {
+	background: #dcdcdc;
+}
+.company-wrap .company-select-box {
+	width: 270px;
+}
+.button-no-bg-wrap {
+	margin: 28px 0 0 0;
+	display: inline-block;
+}
+.company-wrap .button.add {
+	float: right;
+	margin: 28px 20px 0 0;
+}
+#content .project-view {
+	border: none;
+}
+#content .project-view-controls li:last-child {
+	margin: 7px 0 0 64px;
+}
+#content  .project-view-controls li {
+	margin-left: 11px;
+	margin-right: -25px;
+}
+#content .project-view-controls li:first-child {
+	margin: 0 0 0 20px;
+}
+.big-table .switch {
+	margin: 9px 0 0 -3px;
+}
+.big-table .big-table-button {
+	margin: 9px 0 0 6px;
+}
+.button-vk {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	background: url(../img/sprite.png) -1982px -1320px no-repeat;
+	cursor: pointer;
+	margin-left: 7px;
+}
+.proj-controls {
+	overflow: hidden;
+	float: right;
+	margin-right: 8px;
+	margin-top: 9px;
+}
+.proj-controls li {
+	float: left;
+	margin-left: 7px;
+}
+.proj-controls li:first-child {
+	margin-left: 0;
+}
+.big-table thead tr td + td {
+	padding: 0 0 0 15px;
+}
+.big-table tbody tr td + td {
+	padding: 0 0 0 15px;
+}
+.big-table td {
+	/*width: 26.1%;*/
+	width: 222px;
+}
+.big-table td + td {
+	/*width: 8.5%;*/
+	width: 67px;
+}
+.big-table td + td + td {
+	/*width: 6.7%;*/
+	width: 50px;
+}
+.big-table td + td + td + td {
+	/*width: 24.5%;*/
+	width: 225px;
+}
+.big-table td + td + td + td + td {
+	/*width: 34.2%;*/
+	width: 319px;
+}
+.table-content tr td:first-child, .table-content tr td:last-child {
+	border: none;
+}
+.table-content td {
+	width: 191px;
+}
+.table-content td + td {
+	width: 67px;
+}
+.table-content td + td + td {
+	width: 50px;
+}
+.table-content td + td + td + td {
+	width: 225px;
+}
+.table-content td + td + td + td + td {
+	width: 318px;
+}
+/*---------------------------------------------------------------------------------------------------------
+end vk_index
+-----------------------------------------------------------------------------------------------------------*/
