@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <title>Цепочка событий</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>	
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<!-- start mainarea -->
+	<div id="mainarea">
+		<!-- start header -->
+		<div id="header">
+			<!-- start nav-box -->
+			<div class="nav-box clearfix">
+				<a href="#" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
+
+				<div class="nav-links-box">
+					<a href="#">Личный кабинет</a>
+					<a href="#">Корзина</a>
+					<a href="#">Акты </a>
+					<a href="#">Анализ</a>
+					<a href="#">Издатели</a>
+					<a href="#">Рекламодатели</a>
+					<a href="#">Офферы</a>
+					<a href="#">Игры</a>
+					<a href="#">Рассылка</a>
+					<a href="#">Аналитика</a>
+				</div>
+
+				<div class="drop-list-box">
+					<a href="#" class="drop-list-btn"></a>
+					<div class="drop-list-wrap">
+						<div class="scroll-box">
+							<ul class="drop-list">
+								<li><a href="#">API</a></li>
+								<li><a href="#">DAU</a></li>
+								<li><a href="#">Уведомления</a></li>
+								<li><a href="#">Баннеры</a></li>
+								<li><a href="#">VK</a></li>
+							</ul>
+						</div>
+						<span class="drop-list-box-arrow"></span>
+					</div>
+				</div>
+
+				<a href="#" class="user-btn">Выйти</a>						
+			</div>
+			<!-- end nav-box -->
+		</div>
+		<!-- end header -->
+
+
+		<!-- start middle -->
+		<div id="middle" class="clearfix">			
+			<!-- start sidebar -->
+			<div id="sidebar">
+				<!-- start company-select-box -->
+				<div class="company-select-box">
+					<h4 class="select-box-title">Кампания</h4>
+					<h3 class="company-select-box-heading"><a href="#">Планета Sushi в Девичьей Красе</a></h3>
+
+					<div class="drop-list-box drop-list-box-blue drop-list-box-large">
+						<a href="#" class="drop-list-btn"></a>
+						<div class="drop-list-wrap">
+							<div class="scroll-box">
+								<ul class="drop-list">
+									<li><a href="#">Планета Sushi в Девичьей Красе</a></li>
+									<li><a href="#">We Try Harder</a></li>
+									<li><a href="#">As good today as it’s always been</a></li>
+									<li><a href="#">Bottle</a></li>
+									<li><a href="#">Reassuringly Expensive</a></li>
+									<li><a href="#">Think Different</a></li>
+									<li><a href="#">The Economist</a></li>
+									<li><a href="#">Just Do It</a></li>
+									<li><a href="#">California Milk Processor Board</a></li>
+								</ul>
+							</div>
+							<span class="drop-list-box-arrow"></span>
+						</div>
+					</div>
+				</div>
+				<!-- end company-select-box -->
+
+				<h4 class="sidebar-heading">События</h4>
+
+				<!-- start secondary-nav -->
+				<ul class="secondary-nav">
+					<li><a href="#" class="secondary-nav-active">Открытие попапа группы</a></li>
+					<li><a href="#">Переход в группу</a></li>
+					<li><a href="#">Выдан бонус за вступление в группу</a></li>
+					<li><a href="#">Открытие попапа теста</a></li>
+					<li><a href="#">Переход к тесту</a></li>
+					<li><a href="#">Старт вступительного видео</a></li>
+					<li><a href="#">Вступительное видео просмотрено</a></li>
+					<li><a href="#">Правильный ответ на первый вопрос</a></li>
+					<li><a href="#">Неправильный ответ на первый вопрос</a></li>
+					<li><a href="#">Правильный ответ на второй вопрос</a></li>
+					<li><a href="#">Неправильный ответ на второй вопрос</a></li>
+					<li><a href="#">Выполнен первый блиц</a></li>
+					<li><a href="#">Выполнен второй блиц</a></li>
+					<li><a href="#">Переход в группу из последнего окна</a></li>
+					<li><a href="#">Просмотр финального видео до конца</a></li>
+					<li><a href="#">Тест провален (закрыт)</a></li>
+					<li><a href="#">Переход в группу из последнего окна</a></li>
+					<li><a href="#">Получен бонус за выполнение теста</a></li>
+				</ul>
+				<!-- end secondary-nav -->
+
+				<h4 class="sidebar-heading">События</h4>
+
+				<!-- start secondary-nav -->
+				<ul class="secondary-nav">
+					<li><a href="#">Открытие попапа группы</a></li>
+					<li><a href="#">Переход в группу</a></li>
+				</ul>
+				<!-- end secondary-nav -->
+			</div>
+			<!-- end sidebar -->
+
+
+			<!-- start content -->
+			<div id="content">
+				<!-- start filter-box -->
+				<div class="filter-box filter-box-minimized">
+					<div class="filter-wrap">
+						<div class="radio-btn-list">
+							<label class="radio-btn"><input type="radio" name="event"><b></b><span>Все события</span></label>
+							<label class="radio-btn"><input type="radio" name="event"><b></b><span>Уникальные события</span></label>
+						</div>
+						
+						<div class="datepicker-list">
+							<div class="datepicker">c <input class="datepicker-btn" type="text" value="2013-03-18" readonly ></div>
+							<div class="datepicker">по <input class="datepicker-btn" type="text" value="2013-04-22" readonly ></div>
+						</div>
+						
+						<div></div>
+
+						<div class="drop-list-box-text">
+							<b>Женщины</b>
+							<div class="drop-list-box drop-list-box-large">
+								<a href="#" class="drop-list-btn"></a>
+								<div class="drop-list-wrap">
+									<div class="scroll-box">
+										<ul class="drop-list">
+											<li><a href="#">Женщины</a></li>
+											<li><a href="#">Мужчины</a></li>
+											<li><a href="#">Дети</a></li>
+										</ul>
+									</div>
+									<span class="drop-list-box-arrow"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="drop-list-box-text">
+							<small>от</small>
+							<b>12</b>
+							<div class="drop-list-box drop-list-box-large">
+								<a href="#" class="drop-list-btn"></a>
+								<div class="drop-list-wrap">
+									<div class="scroll-box">
+										<ul class="drop-list">
+											<li><a href="#">12</a></li>
+											<li><a href="#">13</a></li>
+											<li><a href="#">14</a></li>
+											<li><a href="#">15</a></li>
+											<li><a href="#">16</a></li>
+											<li><a href="#">17</a></li>
+										</ul>
+									</div>
+									<span class="drop-list-box-arrow"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="drop-list-box-text">
+							<small>до</small>
+							<b>60</b>
+							<div class="drop-list-box drop-list-box-large">
+								<a href="#" class="drop-list-btn"></a>
+								<div class="drop-list-wrap">
+									<div class="scroll-box">
+										<ul class="drop-list">
+											<li><a href="#">61</a></li>
+											<li><a href="#">62</a></li>
+											<li><a href="#">63</a></li>
+											<li><a href="#">64</a></li>
+											<li><a href="#">65</a></li>
+											<li><a href="#">66</a></li>
+											<li><a href="#">67</a></li>
+											<li><a href="#">68</a></li>
+											<li><a href="#">69</a></li>
+											<li><a href="#">70</a></li>
+											<li><a href="#">71</a></li>
+											<li><a href="#">72</a></li>
+											<li><a href="#">73</a></li>
+											<li><a href="#">74</a></li>
+											<li><a href="#">75</a></li>								
+										</ul>
+									</div>
+									<span class="drop-list-box-arrow"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="drop-list-box-text">
+							<small>из</small>
+							<b>Любой страны</b>
+							<div class="drop-list-box drop-list-box-large">
+								<a href="#" class="drop-list-btn"></a>
+								<div class="drop-list-wrap">
+									<div class="scroll-box">
+										<ul class="drop-list">
+											<li><a href="#">Украина</a></li>
+											<li><a href="#">Англия</a></li>
+											<li><a href="#">Германия</a></li>
+											<li><a href="#">Россия</a></li>
+											<li><a href="#">Финляндия</a></li>
+										</ul>
+									</div>
+									<span class="drop-list-box-arrow"></span>
+								</div>
+							</div>
+						</div>
+
+						<a href="#" class="button success">применить</a>
+					</div>					
+				</div>
+				<!-- end filter-box -->
+				
+				<a href="#" class="filter-btn">Фильтр<span></span></a>			
+
+				<h2 class="heading-large indent-large clear-r">От открытия до завершения теста</h2>
+				<img class="schedule" src="uploads/schedule-6.jpg" alt="schedule">
+
+				<a href="#" class="scroll-top-button">В начало</a>	
+					
+				<div class="clear"></div>
+			</div>
+			<!-- end content -->
+		</div>
+		<!-- end middle -->
+	
+		
+		<!-- start footer -->
+		<div id="footer">
+			<div class="copyright">&copy; freetopay, 2013</div>
+		</div>
+		<!-- end footer -->		
+	</div>
+	<!-- end mainarea -->
+</body>
+</html>

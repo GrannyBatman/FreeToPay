@@ -12,6 +12,26 @@ $(document).ready(function() {
     	}
 	});
 
+
+
+	// --------------- Анимация сворачивания / разворачивания .filter-box ---------------
+	$('.filter-btn').on('click', animateFilterBox);
+
+	function animateFilterBox(event) {
+		event.preventDefault();		
+		var filterBox = $('.filter-box'),
+			height = filterBox.find('.filter-wrap').outerHeight(),
+			minHeight = 5;
+
+		if (filterBox.hasClass('filter-box-minimized')) {
+			$(this).toggleClass('filter-btn-close');
+			filterBox.height(minHeight).removeClass('filter-box-minimized').animate({'height': height}, 500);			
+		} else {
+			$(this).toggleClass('filter-btn-close');
+			filterBox.height(height).addClass('filter-box-minimized').animate({'height': minHeight}, 500);
+		}
+	}
+
 	
 
 	// --------------- Подключение кадендаря jQuery-UI ---------------
