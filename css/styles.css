@@ -1804,19 +1804,6 @@ start vk_index
 	float: right;
 	margin: 28px 20px 0 0;
 }
-#content .project-view {
-	border: none;
-}
-#content .project-view-controls li:last-child {
-	margin: 7px 0 0 64px;
-}
-#content  .project-view-controls li {
-	margin-left: 11px;
-	margin-right: -25px;
-}
-#content .project-view-controls li:first-child {
-	margin: 0 0 0 20px;
-}
 .big-table .switch {
 	margin: 9px 0 0 -3px;
 }
