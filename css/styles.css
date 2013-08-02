@@ -133,7 +133,7 @@ a {
 
 #content {
 	position: relative;
-	padding-bottom: 87px;
+	padding-bottom: 150px;
 }
 
 #middle #content {
@@ -584,7 +584,7 @@ td {
 	border: 1px solid #c5c5c1;
 }
 .big-table thead tr {
-	height: 38px;
+	height: 36px;
 }
 .big-table thead tr td {
 	border: 1px solid #c5c5c1;
@@ -639,7 +639,7 @@ td {
 .big-table tbody tr td:last .big-table-line-text.second {
 	float: left;
 }
-.big-table tbody tr td:hover {
+.big-table tbody tr:hover {
 	color: #0096ff;
 	background: #e1f0fa;
 }
@@ -653,7 +653,7 @@ td {
 	margin-top: -8px;
 	left: -11px;
 }
-.big-table tbody tr td:hover .drop-table {
+.big-table tbody tr:hover .drop-table {
 	background-position: 0 -1280px;
 	background-color: #e1f0fa;
 }
@@ -663,7 +663,6 @@ td {
 }
 .table-content tbody tr td {
 	padding-left: 62px;
-	/*border:none;*/
 	border-top: none;
 	border-bottom: none;
 }
@@ -710,7 +709,6 @@ td {
 }
 .td-wrap-title {
 	position: relative;
-	/*padding: 14px 20px 14px 0px;*/
 	padding: 10px 20px 0px 0px;
 	display: inline-block;
 }
@@ -721,6 +719,10 @@ td {
 .td-wrap {
 	position: relative;
 	padding: 15px 0 17px 0px;
+}
+.big-table tbody tr td {
+	border-top: none;
+	border-bottom: none;
 }
 .big-table tbody tr:nth-child(2n+1) .td-wrap {
 	padding: 15px 0 15px 0px;
@@ -1517,6 +1519,13 @@ td {
 	box-sizing: border-box; 
 }
 
+.project-view.one {
+	border-top: none;
+}
+
+.project-view.no-border {
+	border: none;
+}
 .project-view:hover {
 	border-color: #c5c5c2;
 	background: #f2faff;
@@ -1541,6 +1550,9 @@ td {
 	color: #5fbb46; 
 	font-size: 18px;
 	font-weight: normal;
+}
+.project-view.orange .project-view-title a {
+	color: #e7a83e;
 }
 
 .project-view-description {
@@ -1787,9 +1799,6 @@ a.secondary-nav-active {
 /*---------------------------------------------------------------------------------------------------------
 start vk_index
 -----------------------------------------------------------------------------------------------------------*/
-#mainarea {
-	overflow: hidden;
-}
 .company-wrap {
 	background: #dcdcdc;
 }
@@ -1823,6 +1832,8 @@ start vk_index
 	float: right;
 	margin-right: 8px;
 	margin-top: 9px;
+	border-left: 1px solid #dfdfde;
+	padding-left: 10px;
 }
 .proj-controls li {
 	float: left;
@@ -1838,23 +1849,18 @@ start vk_index
 	padding: 0 0 0 15px;
 }
 .big-table td {
-	/*width: 26.1%;*/
 	width: 222px;
 }
 .big-table td + td {
-	/*width: 8.5%;*/
 	width: 67px;
 }
 .big-table td + td + td {
-	/*width: 6.7%;*/
 	width: 50px;
 }
 .big-table td + td + td + td {
-	/*width: 24.5%;*/
 	width: 225px;
 }
 .big-table td + td + td + td + td {
-	/*width: 34.2%;*/
 	width: 319px;
 }
 .table-content tr td:first-child, .table-content tr td:last-child {
@@ -1875,6 +1881,178 @@ start vk_index
 .table-content td + td + td + td + td {
 	width: 318px;
 }
+/*------------------ start hint-block------------------*/
+.wrap-proj-controls {
+	position: relative;
+}
+.hint-block {
+	display: none;
+	position: absolute;
+	bottom: -64px;
+	left: -150%;
+	z-index: 3;
+	padding: 10px 18px 12px 14px;
+	background: #fff;
+	border: 1px solid #e1e1e1;
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,.14);
+	box-shadow: 0 0 8px rgba(0,0,0,.14);
+}
+.hint-block-text {
+	color: #181818;
+	font-size: 12px;
+}
+.hint-block-pointer {
+	position: absolute;
+	bottom: -28px;
+	left: 50%;
+	z-index: 5;
+	display: none;
+	margin-left: -15px;
+	width: 30px;
+	height: 12px;
+	background: url(../img/sprite.png) 0 -120px no-repeat;
+}
+.proj-controls-one {
+	float: left;
+	margin-left: 5px;
+	position: relative;
+}
+.proj-controls-one:hover .hint-block, .proj-controls-one:hover .hint-block-pointer {
+	display: inline-block;
+}
+.proj-controls.hint{
+	overflow: visible;
+}
+/*------------------ start hint-block------------------
+
 /*---------------------------------------------------------------------------------------------------------
-end vk_index
+end 03_vk_главная
 -----------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------
+start 06_статистика
+-------------------------------------------------------------------------------------------------------------*/
+.go-back-link {
+	float: left;
+	margin: 29px 0 0 10px;
+	display: inline-block;
+	color: #0095ff;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 23px;
+	background: url(../img/sprite.png) -1982px -1358px no-repeat;
+}
+.statistics_wrap {
+	margin: 12px 0 0 20px;
+	width: 420px;
+	float: left;
+}
+.period {
+	float: right;
+	margin: 41px 21px 0 0;
+}
+.period .datepicker-list {
+	margin: 10px 10px 0 0;
+}
+.period .datepicker-btn {
+	width: 90px;
+}
+.statistics-box-heading {
+	color: #4c4b4b;
+	font-family: 'pt_sansbold';
+	font-size: 36px;
+	line-height: 37px;
+}
+.statistics-box-qualification {
+	font-size: 18px;
+	color: #4c4b4b;
+	font-family: 'pt_sansregular';
+	line-height: 25px;
+}
+.period .datepicker-btn {
+	color: #0096ff;
+	font-size: 16px;
+}
+.schedule.statistics {
+	margin-top: 47px;
+}
+/*таблица
+.big-table.statistics td {
+	width: 245px;
+}
+.big-table.statistics td + td {
+	width: 115px;
+}
+.big-table.statistics td + td + td {
+	width: 106px;
+}
+.big-table.statistics td + td + td {
+	width: 83px;
+}
+.big-table.statistics td + td + td + td {
+	width: 92px;
+}
+.big-table.statistics td + td + td + td + td + td {
+	width: 105px;
+}
+.big-table.statistics td + td + td + td + td + td + td {
+	width: 107px;
+}
+.big-table.statistics td + td + td + td + td + td + td + td {
+	width: 129px;
+}
+.table-content.statics td {
+	width: 164px;
+}
+.table-content.statics td + td {
+	width: 106px;
+}
+.table-content.statics td + td + td {
+	width: 90px;
+}
+.table-content.statics td + td + td + td {
+	width: 95px;
+}
+.table-content.statics td + td + td + td + td {
+	width: 87px;
+}
+.table-content.statics td + td + td + td + td + td {
+	width: 117px;
+}
+.table-content.statics td + td + td + td + td + td + td {
+	width: 111px;
+}
+.table-content.statics td + td + td + td + td + td + td + td {
+	width: 127px;
+}
+.table-content.statics .table-content-line-text {
+	width: 140px;
+}
+.big-table.statistics tfoot tr, .big-table.statistics thead tr {
+	height: 60px;
+}
+.big-table.statistics td .td-wrap-title {
+	padding: 26px 20px 0px 5px;
+}
+.big-table.statistics td:last-child .td-wrap-title {
+	padding: 19px 20px 0px 5px;
+}
+.big-table.statistics tfoot tr td {
+	border-top: 1px solid #c5c5c1;
+	border-left: 1px solid #c5c5c1;
+	background-color: #fffae6;
+	padding: 20px 0 0 20px;
+	color: #000;
+	font-size: 14px;
+	font-family: 'pt_sansbold';
+}
+.big-table.statistics tfoot tr td:first-child {
+	border-left: none;
+	padding: 20px 0 0 51px;
+}
+
+/*------------------------------------------------------------------------------------------------------------
+end 06_статистика
+-------------------------------------------------------------------------------------------------------------*/
