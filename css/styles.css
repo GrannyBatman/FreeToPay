@@ -24,10 +24,6 @@ html{ width:100%; height:100%; }
     *zoom: 1;
 }
 
-.clear-r {
-	clear: right;
-}
-
 /* End General
 --------------------------------------------------------------------------------------------------------*/
 
@@ -121,14 +117,12 @@ a {
 
 /* =Middle
 --------------------------------------------------------------------------------------------------------*/
-#middle {
-	background: #eee;
-}
-
 #sidebar {
 	float: left;
 	width: 320px;
-	padding-bottom: 28px;
+	padding-bottom: 5028px;
+	margin-bottom: -5000px;
+	background: #eee;
 }
 
 #content {
@@ -137,8 +131,8 @@ a {
 }
 
 #middle #content {
-	background: #fff;
-	margin-left: 320px;
+	float: left;
+	width: 660px;
 }
 
 
@@ -173,8 +167,75 @@ a {
 }
 
 .indent-large {
-	margin: 5px 0 35px 0;
-	padding-top: 10px;
+	margin: 15px 0 35px 0;
+}
+
+
+/*--------------- add-content-box ---------------*/ 
+.add-content-box {
+	padding: 0 20px;
+}
+
+.add-content-header {
+	height: 55px;
+	margin-bottom: 36px;
+	border-bottom: 3px solid #4595ac;
+}
+
+.add-content-title {
+	min-width: 241px;
+	float: left;
+}
+
+.add-content-title h2 {	
+	display: inline-block;
+	padding: 0 22px 0 18px;
+	height: 52px;
+	border: 3px solid #4595ac;
+	border-bottom: none;
+	color: #4595ac;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font: normal 14px/52px 'pt_sansbold', Arial, sans-serif;
+}
+
+.add-content-info {
+	padding-left: 30px;
+	color: #8b8b8b;	 
+	font-size: 11px;
+	height: 55px;
+	line-height: 55px;
+	overflow: hidden;	
+}
+
+.add-content-info span {
+	line-height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.add-content-body > div {
+	margin-bottom: 21px;
+}
+
+.add-content-label {
+	float: left;
+	width: 140px;
+	padding: 5px 20px 0 0;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.add-content-label span {
+	font-size: 11px;
+	color: #8b8b8b;
+	display: block;
+	line-height: 15px;
+}
+
+.add-content-data {
+	width: 620px;
+	float: left;
 }
 
 
@@ -1224,6 +1285,10 @@ td {
 	font-family: inherit;
 }
 
+.text-input-wide {
+	width: 593px;
+}
+
 .text-input:hover,
 .text-input:focus {
 	border-color: #0096ff;
@@ -1256,6 +1321,7 @@ td {
 .text-input-success,
 .text-input-success:hover,
 .text-input-success:focus {
+	padding-right: 35px;
 	border-color: #60bb46;
 	background: url(../img/sprite.png) 100% -1151px no-repeat;
 }
@@ -1263,6 +1329,7 @@ td {
 .text-input-error,
 .text-input-error:hover,
 .text-input-error:focus {
+	padding-right: 35px;
 	border-color: #bd4e6f;
 	background: url(../img/sprite.png) 100% -1231px no-repeat;
 }
