@@ -105,7 +105,7 @@
 				"id": "sbHolder_" + inst.uid,
 				"class": inst.settings.classHolder,
 				"tabindex": $target.attr("tabindex")
-			});
+			}).addClass( $target.attr('class') );
 			
 			sbSelector = $("<a>", {
 				"id": "sbSelector_" + inst.uid,

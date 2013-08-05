@@ -98,16 +98,13 @@ $(document).ready(function() {
 
 
 
-	// --------------- Подключение jQuery Selectbox --------------- 
+	// --------------- Подключение jQuery Selectbox ---------------
 	$('.custom-select').selectbox({
 		onChange: function(val) {
 			var id = $(this).attr('sb');
 			$('#sbSelector_' + id)[0].className = 'sbSelector ' + val;
 		}
 	});
-
-
-
 
 
 
