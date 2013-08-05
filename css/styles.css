@@ -700,10 +700,10 @@ td {
 .big-table tbody tr td:last .big-table-line-text.second {
 	float: left;
 }
-.big-table tbody tr:hover {
+/*.big-table tbody tr:hover {
 	color: #0096ff;
 	background: #e1f0fa;
-}
+}*/
 .drop-table {
 	display: inline-block;
 	width: 16px;
@@ -732,6 +732,12 @@ td {
 }
 .table-content tbody tr:nth-child(2n) {
     background: #ffffff;
+}
+.big-table tbody tr:hover {
+	background: #e1f0fa;
+}
+.big-table tbody tr:hover td:first-child {
+	color: #0096ff;
 }
 .vert-decor {
 	display: inline-block;
@@ -1529,6 +1535,26 @@ td {
 	color: #fff;
 	border-color: transparent;
 }
+.button.settings {
+	background: #fafafa url(../img/sprite.png) -1972px -1392px no-repeat;
+	padding-left: 35px;
+	padding-right: 20px;
+}
+.button.settings:hover {
+	background: url(../img/sprite.png) -1972px -1512px no-repeat;
+	color: #fff;
+	border-color: transparent;
+}
+.button.info {
+	background: #fafafa url(../img/sprite.png) -1972px -1430px no-repeat;
+	padding-left: 35px;
+	padding-right: 20px;
+}
+.button.info:hover {
+	background: url(../img/sprite.png) -1972px -1550px no-repeat;
+	color: #fff;
+	border-color: transparent;
+}
 .button.border-hover:hover {
 	border-color: #099aff; 
 	background-color: #099aff;
@@ -2031,12 +2057,14 @@ start 06_статистика
 	font-family: 'pt_sansbold';
 	font-size: 36px;
 	line-height: 37px;
+	font-weight: normal;
 }
 .statistics-box-qualification {
 	font-size: 18px;
 	color: #4c4b4b;
 	font-family: 'pt_sansregular';
 	line-height: 25px;
+	font-weight: normal;
 }
 .period .datepicker-btn {
 	color: #0096ff;
@@ -2044,56 +2072,91 @@ start 06_статистика
 }
 .schedule.statistics {
 	margin-top: 47px;
+	margin-bottom: 36px;
 }
-/*таблица
+/*таблица*/
 .big-table.statistics td {
-	width: 245px;
+	/*width: 233px;*/
+	width: 25%;
 }
 .big-table.statistics td + td {
-	width: 115px;
+	/*width: 106px;*/
+	width: 11.6%;
 }
 .big-table.statistics td + td + td {
-	width: 106px;
+	/*width: 90px;*/
+	width: 10.7%;
 }
-.big-table.statistics td + td + td {
-	width: 83px;
+.big-table.statistics td + td + td + td  {
+	/*width: 63px;*/
+	width: 8.4%;
 }
-.big-table.statistics td + td + td + td {
-	width: 92px;
+.big-table.statistics td + td + td + td + td {
+	/*width: 76px;*/
+	width: 9.4%;
 }
 .big-table.statistics td + td + td + td + td + td {
-	width: 105px;
+	/*width: 87px;*/
+	width: 10.7%;
 }
 .big-table.statistics td + td + td + td + td + td + td {
-	width: 107px;
+	/*width: 92px;*/
+	width: 11.2%;
 }
 .big-table.statistics td + td + td + td + td + td + td + td {
-	width: 129px;
+	/*width: 115px;*/
+	width: 12.9%;
+}
+
+/*.table-content-wrap td{
+	width: auto;
+}*/
+/*--всплыв таблица---*/
+.table-content.statics, .big-table.statistics {
+	width: 100%;
 }
 .table-content.statics td {
-	width: 164px;
+	/*width: 191px;*/
+	/*width: 19.5%;*/
+	width: 24.89%;
 }
+@-moz-document url-prefix() { .table-content.statics td { width: 25.05%; } } 
 .table-content.statics td + td {
-	width: 106px;
+	/*width: 105px;*/
+	/*width: 10.7%;*/
+	width: 11.6%;
 }
 .table-content.statics td + td + td {
-	width: 90px;
+	/*width: 96px;	*/
+	/*width: 9.8%;*/
+	width: 10.71%;
 }
 .table-content.statics td + td + td + td {
-	width: 95px;
+	/*width: 69px;*/
+	/*width: 7%;*/
+	width: 8.4%;
 }
 .table-content.statics td + td + td + td + td {
-	width: 87px;
+	/*width: 76px;*/
+	/*width: 7.8%;*/
+	width: 9.4%;
 }
 .table-content.statics td + td + td + td + td + td {
-	width: 117px;
+	/*width: 98px;*/
+	/*width: 10%;*/
+	width: 10.7%;
 }
 .table-content.statics td + td + td + td + td + td + td {
-	width: 111px;
+	/*width: 98px;*/
+	/*width: 10%;*/
+	width: 11.2%;
 }
 .table-content.statics td + td + td + td + td + td + td + td {
-	width: 127px;
+	/*width: 119px;*/
+	/*width: 12.1%;*/
+	width: 12.9%;
 }
+@-moz-document url-prefix() { .table-content.statics td + td + td + td + td + td + td + td { width: 12.87%; } }
 .table-content.statics .table-content-line-text {
 	width: 140px;
 }
@@ -2119,7 +2182,163 @@ start 06_статистика
 	border-left: none;
 	padding: 20px 0 0 51px;
 }
-
+.big-table.statistics thead tr td .sort-table {
+	right: -1px;
+	margin-top: 7px;
+}
+.big-table.statistics thead tr td:last-child .sort-table {
+	right: 18px;
+	margin-top: 4px;
+}
+.big-table.statistics tbody tr td + td {
+	padding: 15px 0 0 19px;
+}
 /*------------------------------------------------------------------------------------------------------------
 end 06_статистика
+-------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------
+start 10_Рекламные_Предложения
+-------------------------------------------------------------------------------------------------------------*/
+.promo_wrap {
+	overflow: hidden;
+}
+.promo_wrap .statistics-box-heading {
+	display: inline-block;
+	float: left;
+	margin: 40px 0 0 22px;
+}
+.promo_wrap .button {
+	float: right;
+	margin: 45px 22px 0 0;
+}
+.big-table.promotion {
+	margin: 47px 0 27px 0;
+}
+.big-table.promotion tbody tr {
+	height: 44px;
+}
+.big-table.promotion td {
+	width: 330px;
+}
+.big-table.promotion td + td {
+	width: 61px;
+}
+.big-table.promotion td + td + td {
+	width: 225px;
+	padding-left: 19px;
+}
+.big-table.promotion td + td + td + td {
+	width: 301px;
+}
+.big-table.promotion tbody td {
+	padding: 0px 0 0 19px;
+}
+.big-table.promotion tbody td + td + td {
+	padding: 15px 0 0 19px;
+}
+.big-table.promotion tbody td + td + td + td {
+	padding: 0px 0 0 14px;
+}
+.big-table.promotion thead tr td .sort-table {
+	right: 1px;
+}
+.big-table.promotion .big-table-button {
+	margin: 9px 0 0 2px;
+}
+/*------------------------------------------------------------------------------------------------------------
+end 10_Рекламные_Предложения
+-------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------
+start 11_Статистика_Рекламных_Предложений
+-------------------------------------------------------------------------------------------------------------*/
+.statistics_buttons {
+	margin: 0 0 0 20px;
+}
+.day_statistics {
+	overflow: hidden;
+	margin: 0 0 0 20px;
+}
+.statistics_title {
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	line-height: 37px;
+	color: #515151;
+	font-family: 'pt_sansbold';
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.download_statistics {
+	display: inline-block;
+	float: left;
+	margin: 0 0 0 25px;
+	color: #0096ff;
+	text-decoration: none;
+	font-family: 'pt_sansregular';
+	font-size: 10px;
+	line-height: 37px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 23px;
+	background: url(../img/sprite.png) -1982px -1467px no-repeat;
+}
+.download_statistics span {
+	color: #000000;
+}
+.big-table.statistics_promo {
+	width: 100%;
+}
+.big-table.statistics_promo thead tr td {
+	padding: 11px 18px 12px 18px;
+}
+.big-table.statistics_promo tbody tr td {
+	padding: 15px 18px 15px 18px;
+}
+.big-table.statistics_promo td {
+	width: 107px;
+}
+.big-table.statistics_promo td + td {
+	width: 212px;
+}
+.big-table.statistics_promo td + td + td {
+	width: 215px;
+}
+.big-table.statistics_promo td + td + td + td {
+	width: 214px;
+}
+.big-table.statistics_promo td + td + td + td + td {
+	width: 221px;
+}
+.big-table.statistics_promo tfoot tr td {
+	padding: 32px 0 31px 0;	
+}
+.big-table.statistics_promo tfoot tr {
+	background: #eeeeee;
+}
+.big-table.statistics_promo tfoot tr:hover {
+	background-color: #e1eff9;
+}
+.big-table.statistics_promo tfoot .drop-list-box-text {
+	float: right;
+	margin-right: 40px;
+}
+.big-table.statistics_promo tfoot .pager-disabled {
+	float: right;
+}
+.big-table.statistics_promo tfoot .pager-disabled.first {
+	border-right: 1px solid #838383;
+	padding-right: 8px;
+	margin-right: 8px;
+}
+.big-table.statistics_promo tfoot .pager-col span {
+	float: right;
+	margin: -8px 7px 0 7px;
+}
+.big-table.statistics_promo tfoot .pager-next-article{
+	float: left;
+}
+/*------------------------------------------------------------------------------------------------------------
+end 11_Статистика_Рекламных_Предложений
 -------------------------------------------------------------------------------------------------------------*/
