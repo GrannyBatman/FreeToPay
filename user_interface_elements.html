@@ -497,8 +497,16 @@
 
 		<!-- start text-input -->
 		<input class="text-input" type="text" name="#"> <br><br>
-		<input class="text-input" type="text" name="#"><span class="input-value-length">25</span> <br><br>
-		<input class="text-input" type="text" name="#"><span class="input-value-length input-value-error">0</span> <br><br>
+		
+		<div class="text-input-wrap">
+			<div class="text-input-col"><input class="text-input" type="text" name="#"></div>
+			<div class="text-input-col"><span class="input-value-length">25</span></div>			
+		</div> <br><br>
+
+		<div class="text-input-wrap">
+			<div class="text-input-col"><input class="text-input" type="text" name="#"></div>
+			<div class="text-input-col"><span class="input-value-length input-value-error">0</span></div>			
+		</div> <br><br>		
 
 		<input class="text-input" type="text" name="#"><span class="text-input-message">От 3 до 60 символов</span> <br><br>
 		<input class="text-input text-input-success" type="text" name="#"> <br><br>
