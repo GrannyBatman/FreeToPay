@@ -57,10 +57,7 @@ $(document).ready(function() {
 	$('.datepicker-btn').datepicker({
 		dateFormat: "yy-mm-dd",
 		showOtherMonths: true,
-        selectOtherMonths: true,
-        onSelect: function (string, object) {
-         	$(this).next().text(string);
-        }
+        selectOtherMonths: true
 	});
 
 
@@ -75,24 +72,15 @@ $(document).ready(function() {
 		event.preventDefault();
 		event.stopPropagation();
 				
-		var listBox = $(this).siblings('.drop-list-wrap'),
-			list = $('.drop-list li', listBox),
-			scrollBox = $('.scroll-box', listBox),
-			scrollNum = 10; // колличетсво элементов списка, при котором появляется скролл
+		var list = $(this).siblings('.drop-list-wrap');
 
-		if (listBox.is(':visible')) {
-			listBox.fadeOut(150);
+		if (list.is(':visible')) {
+			list.fadeOut(150);
 		} else {
 			$('.drop-list-wrap').hide();
-
-			if ( list.length > scrollNum){
-				listBox.fadeIn(300).css('margin-left', -(listBox.width() / 2 + 8));
-			}else{
-				listBox.fadeIn(300).css('margin-left', -(listBox.width() / 2));
-			}
+			list.fadeIn(300).css('margin-left', -(list.width() / 2));
 		}		
 	}
-
 
 
 	function hideList(event) {
@@ -110,13 +98,16 @@ $(document).ready(function() {
 
 
 
-	// --------------- Подключение jQuery Selectbox ---------------
+	// --------------- Подключение jQuery Selectbox --------------- 
 	$('.custom-select').selectbox({
 		onChange: function(val) {
 			var id = $(this).attr('sb');
 			$('#sbSelector_' + id)[0].className = 'sbSelector ' + val;
 		}
 	});
+
+
+
 
 
 
