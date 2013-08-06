@@ -1732,6 +1732,7 @@ td {
 	display: block; 
 	margin-top: 9px;
 	line-height: 15px;	
+	max-width: 460px;
 }
 
 .text-input-col + .text-input-col .text-input-message {
