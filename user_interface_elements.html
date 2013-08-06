@@ -84,8 +84,14 @@
 				</div>
 				
 				<div class="datepicker-list">
-					<div class="datepicker">c <input class="datepicker-btn" type="text" value="2013-03-18" readonly ></div>
-					<div class="datepicker">по <input class="datepicker-btn" type="text" value="2013-04-22" readonly ></div>
+					<span class="datepicker-box">c
+						<input class="datepicker-btn" type="text" value="2013-03-18" readonly >
+						<span class="inp_text">2013-03-18</span>
+					</span>					
+					<span class="datepicker-box">по
+						<input class="datepicker-btn" type="text" value="2013-03-18" readonly >
+						<span class="inp_text">2013-03-18</span>
+					</span>
 				</div>
 				
 				<div></div>
@@ -253,8 +259,14 @@
 				</div>
 				
 				<div class="datepicker-list">
-					<div class="datepicker">c <input class="datepicker-btn" type="text" value="2013-03-18" readonly ></div>
-					<div class="datepicker">по <input class="datepicker-btn" type="text" value="2013-04-22" readonly ></div>
+					<span class="datepicker-box">c
+						<input class="datepicker-btn" type="text" value="2013-03-18" readonly >
+						<span class="inp_text">2013-03-18</span>
+					</span>					
+					<span class="datepicker-box">по
+						<input class="datepicker-btn" type="text" value="2013-03-18" readonly >
+						<span class="inp_text">2013-03-18</span>
+					</span>
 				</div>
 				
 				<div></div>
@@ -485,19 +497,26 @@
 
 		<!-- start text-input -->
 		<input class="text-input" type="text" name="#"> <br><br>
-		<div class="text-input-wrap"><input class="text-input" type="text" name="#"><span class="input-value-length">25</span></div> <br><br>
-		<div class="text-input-wrap"><input class="text-input" type="text" name="#"><span class="input-value-length input-value-error">0</span></div> <br><br>
+
+		<div class="text-input-wrap">
+			<div class="text-input-col"><input class="text-input" type="text" name="#"></div>
+			<div class="text-input-col"><span class="input-value-length">25</span></div>			
+		</div> <br><br>
+
+		<div class="text-input-wrap">
+			<div class="text-input-col"><input class="text-input" type="text" name="#"></div>
+			<div class="text-input-col"><span class="input-value-length input-value-error">0</span></div>			
+		</div> <br><br>		
 
 		<input class="text-input" type="text" name="#"><span class="text-input-message">От 3 до 60 символов</span> <br><br>
 		<input class="text-input text-input-success" type="text" name="#"> <br><br>
 		<input class="text-input text-input-error" type="text" name="#">
 		<span class="text-input-message text-input-warning">Поле не может быть пустым. От 3 до 60 символов</span> <br>
+
 		<div class="numeric-input">
 			<input type="text" class="text-input">
 			<span class="numeric-input-controls"><a href="#" class="numeric-input-plus"></a><a href="#" class="numeric-input-minus"></a></span>
 		</div>
-			
-
 		<!-- end text-input -->
 
 		<br><br>
@@ -555,7 +574,7 @@
 		
 		<!-- start pager -->
 		<div class="pager">
-			<div class="pager-col">
+			<div class="pager-col pager-col-first">
 				<a href="#" class="pager-prev-article pager-disabled">Введение</a>
 			</div>
 			<div class="pager-col">
@@ -569,7 +588,7 @@
 				</ul>
 				<a href="#" class="pager-next-btn pager-disabled"></a>
 			</div>
-			<div class="pager-col">
+			<div class="pager-col pager-col-last">
 				<a href="#" class="pager-next-article">Механизм работы FreetoPay с рекламодателями</a>
 			</div>
 		</div>
