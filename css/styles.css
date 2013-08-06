@@ -2164,15 +2164,19 @@ a.secondary-nav-active {
 }
 
 .pager-col-first,
-.pager-col-last {
+.pager-col-last,
+.pager-col:first-child,
+.pager-col:last-child {
 	width: 50%;
 	text-align: right;
 }
 
-.pager-col:last-child {
+.pager-col:last-child,
+.pager-col-last {
 	text-align: left;
 }
 
+.pager-col-first + .pager-col,
 .pager-col:first-child + .pager-col {
 	white-space: nowrap;
 	padding: 0 15px;
@@ -3040,7 +3044,7 @@ start 11_Статистика_Рекламных_Предложений
 	float: left;
 	width: 740px;
 }
-.big-table.statistics-promo tfoot .pager-col:first-child, .pager-col:last-child {
+.big-table.statistics-promo tfoot .pager-col:first-child, .big-table.statistics-promo tfoot .pager-col:last-child {
 	width: 135px;
 	text-align: right;
 	display: inline-block;
