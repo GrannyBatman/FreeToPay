@@ -67,7 +67,7 @@ body { font-family: 'pt_sansregular', Arial, Tahoma, Geneva, sans-serif; font-si
 }
 
 @font-face {
-    font-family: 'pt_sansregular';
+    	
     src: url('fonts/pt_sans-web-regular.eot');
     src: url('fonts/pt_sans-web-regular.eot?#iefix') format('embedded-opentype'),
          url('fonts/pt_sans-web-regular.woff') format('woff'),
@@ -1026,19 +1026,19 @@ td {
 	display: none;
 	width: 8px;
 	height: 14px;
-	margin-top: -1px;
+	margin-top: -6px;
 	background: url(../img/sort-table.png) no-repeat;
 	position: absolute;
 	top: 50%;
-	right: -4px;
+	right: 5px;
 }
 .big-table thead tr td + td + td .sort-table {
 	right: 7px;
 	margin-top: -3px;
 }
 .big-table thead tr td + td + td + td .sort-table {
-	right: -4px;
-	margin-top: -1px;
+	right: 6px;
+	margin-top: -6px;
 }
 .big-table thead tr td:hover .sort-table {
 	display: inline-block;
@@ -1101,7 +1101,10 @@ td {
 .big-table tbody tr:hover {
 	background: #e1f0fa;
 }
-.big-table tbody tr:hover td:first-child {
+.big-table > tbody > tr:hover > td:first-child {
+	color: #0096ff;
+}
+.table-content tbody tr:hover td:first-child {
 	color: #0096ff;
 }
 .vert-decor {
@@ -1138,11 +1141,20 @@ td {
 .big-table-line-text.second {
 	margin-left: 3px;
 	margin-top: 14px;
+	max-width: 200px;
+	margin-bottom: 14px;
 }
 .td-wrap-title {
 	position: relative;
-	padding: 10px 20px 0px 0px;
+	padding: 0 20px 0 0px;
 	display: inline-block;
+}
+.big-table-title-text {
+	display: inline-block;
+	margin: 10px 0 10px 0;
+}
+.td-wrap-title .button-vk {
+	margin-top: 10px;
 }
 .table-content-line-text {
 	display: inline-block;
@@ -2448,7 +2460,7 @@ start vk_index
 	background: #dcdcdc;
 }
 .company-wrap .company-select-box {
-	width: 270px;
+	width: 280px;
 }
 .button-no-bg-wrap {
 	margin: 28px 0 0 0;
@@ -2549,7 +2561,7 @@ start vk_index
 }
 .hint-block-pointer {
 	position: absolute;
-	bottom: -28px;
+	top: -12px;
 	left: 50%;
 	z-index: 5;
 	display: none;
@@ -2589,7 +2601,7 @@ start 06_статистика
 	padding-left: 23px;
 	background: url(../img/sprite.png) -1982px -1358px no-repeat;
 }
-.statistics_wrap {
+.statistics-wrap {
 	margin: 12px 0 0 20px;
 	width: 420px;
 	float: left;
@@ -2716,6 +2728,9 @@ start 06_статистика
 	height: 60px;
 }
 .big-table.statistics td .td-wrap-title {
+	padding: 16px 20px 0px 5px;
+}
+.big-table.statistics td + td .td-wrap-title {
 	padding: 26px 20px 0px 5px;
 }
 .big-table.statistics td:last-child .td-wrap-title {
@@ -2736,6 +2751,10 @@ start 06_статистика
 }
 .big-table.statistics thead tr td .sort-table {
 	right: -1px;
+	margin-top: 3px;
+}
+.big-table.statistics thead tr td + td .sort-table {
+	right: -1px;
 	margin-top: 7px;
 }
 .big-table.statistics thead tr td:last-child .sort-table {
@@ -2743,7 +2762,7 @@ start 06_статистика
 	margin-top: 4px;
 }
 .big-table.statistics tbody tr td + td {
-	padding: 15px 0 0 19px;
+	padding: 15px 0 15px 19px;
 }
 /*------------------------------------------------------------------------------------------------------------
 end 06_статистика
@@ -2808,89 +2827,179 @@ start 11_Статистика_Рекламных_Предложений
 .statistics_buttons {
 	margin: 0 0 0 20px;
 }
-.day_statistics {
+.day-statistics {
 	overflow: hidden;
-	margin: 0 0 0 20px;
+	margin: 0 0 19px 20px;
 }
-.statistics_title {
+.statistics-title {
 	display: inline-block;
 	float: left;
 	font-size: 14px;
-	line-height: 37px;
 	color: #515151;
 	font-family: 'pt_sansbold';
 	font-weight: normal;
 	text-transform: uppercase;
 }
-.download_statistics {
+.download-statistics {
 	display: inline-block;
 	float: left;
-	margin: 0 0 0 25px;
+	margin: 4px 0 0 15px;
 	color: #0096ff;
 	text-decoration: none;
 	font-family: 'pt_sansregular';
 	font-size: 10px;
-	line-height: 37px;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding-left: 23px;
-	background: url(../img/sprite.png) -1982px -1467px no-repeat;
+	background: url(../img/sprite.png) -1982px -1478px no-repeat;
 }
-.download_statistics span {
+.download-statistics span {
 	color: #000000;
 }
-.big-table.statistics_promo {
+.big-table.statistics-promo {
 	width: 100%;
 }
-.big-table.statistics_promo thead tr td {
-	padding: 11px 18px 12px 18px;
+.big-table.statistics-promo thead tr td {
+	padding: 0 18px 0 18px;
 }
-.big-table.statistics_promo tbody tr td {
-	padding: 15px 18px 15px 18px;
+.big-table.statistics-promo tbody tr td {
+	padding: 16px 18px 16px 18px;
 }
-.big-table.statistics_promo td {
-	width: 107px;
+.big-table.statistics-promo tbody tr td + td {
+	padding: 16px 18px 16px 20px;
 }
-.big-table.statistics_promo td + td {
-	width: 212px;
+.big-table.statistics-promo td {
+	width: 116px;
 }
-.big-table.statistics_promo td + td + td {
-	width: 215px;
+.big-table.statistics-promo td + td {
+	width: 220px;
 }
-.big-table.statistics_promo td + td + td + td {
-	width: 214px;
+.big-table.statistics-promo td + td + td {
+	width: 223px;
 }
-.big-table.statistics_promo td + td + td + td + td {
+.big-table.statistics-promo td + td + td + td {
+	width: 220px;
+}
+.big-table.statistics-promo td + td + td + td + td {
 	width: 221px;
 }
-.big-table.statistics_promo tfoot tr td {
+.big-table.statistics-promo thead tr td + td + td .sort-table {
+	margin-top: -6px;
+}
+/*tfoot*/
+.big-table.statistics-promo tfoot {
+	border-top: 1px solid #c5c5c1;
+}
+.big-table.statistics-promo tfoot tr td {
 	padding: 32px 0 31px 0;	
 }
-.big-table.statistics_promo tfoot tr {
+.big-table.statistics-promo tfoot tr {
 	background: #eeeeee;
 }
-.big-table.statistics_promo tfoot tr:hover {
+.big-table.statistics-promo tfoot tr:hover {
 	background-color: #e1eff9;
 }
-.big-table.statistics_promo tfoot .drop-list-box-text {
-	float: right;
-	margin-right: 40px;
+.big-table.statistics-promo tfoot .pager {
+	display: inline-block;
+	float: left;
+	width: 740px;
 }
-.big-table.statistics_promo tfoot .pager-disabled {
+.big-table.statistics-promo tfoot .pager-col:first-child, .pager-col:last-child {
+	width: 135px;
+	text-align: right;
+	display: inline-block;
+	float: left;
+}
+.big-table.statistics-promo tfoot .pager-col:first-child {
+	margin-left: 222px;
+	margin-top: 7px;
+}
+.big-table.statistics-promo tfoot .pager-col:first-child + .pager-col {
+	margin-left: 10px;
+}
+.big-table.statistics-promo tfoot .pager-col:last-child {
+	margin-left: 10px;
+}
+.big-table.statistics-promo tfoot .drop-list-box-text {
+	float: right;
+	margin-right: 35px;
+	margin-top: 6px;
+}
+.big-table.statistics-promo tfoot .drop-list-box-text small {
+	margin-right: 4px;
+}
+.big-table.statistics-promo tfoot .pager-prev-article {
 	float: right;
 }
-.big-table.statistics_promo tfoot .pager-disabled.first {
+.big-table.statistics-promo tfoot  .pager-buttons {
+	margin: -2px 19px;
+}
+.big-table.statistics-promo tfoot .pager-disabled.first, .big-table.statistics-promo tfoot .pager-next-article {
 	border-right: 1px solid #838383;
 	padding-right: 8px;
 	margin-right: 8px;
 }
-.big-table.statistics_promo tfoot .pager-col span {
+.big-table.statistics-promo tfoot .pager-next-article.last {
+	border:none;
+	padding-right: 0;
+	margin: 0;
+}
+.big-table.statistics-promo tfoot .pager-col span {
 	float: right;
 	margin: -8px 7px 0 7px;
 }
-.big-table.statistics_promo tfoot .pager-next-article{
+.big-table.statistics-promo tfoot .pager-next-article{
 	float: left;
+}
+.big-table.statistics-promo tfoot .pager-buttons li {
+	margin: 0px 0 0 8px;
+}
+.big-table.statistics-promo tfoot .pager-buttons li:first-child {
+	margin: 0;
+}
+.big-table.statistics-promo tfoot .pager-buttons li span {
+	margin: 0px 0 0 0px;
+}
+.pager-buttons span {
+	cursor: pointer;
+	font-size: 14px;
+}
+.pager-buttons span.disabled {
+	color: #bfbfbf;
+}
+.statistics-box-sub-title {
+	color: #4c4b4b;
+	font-size: 14px;
+	font-weight: normal;
+	font-family: 'pt_sansbold';
+	text-transform: uppercase;
+	margin: 0 0 0 19px;
+}
+.statistics-promo-wrap {
+	margin: 82px 0 0 19px;
+	width: 420px;
 }
 /*------------------------------------------------------------------------------------------------------------
 end 11_Статистика_Рекламных_Предложений
+-------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------
+start 08_Документация
+-------------------------------------------------------------------------------------------------------------*/
+.doc_nav_wrap {
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+}
+.doc_nav_wrap .doc_nav {
+	float: left;
+	margin: 0 0 0 50px;
+}
+.doc_nav_wrap .doc_nav:first-child {
+	margin: 0;
+}
+.statistics-wrap.short {
+	width: 290px;
+}
+/*------------------------------------------------------------------------------------------------------------
+end 08_Документация
 -------------------------------------------------------------------------------------------------------------*/
