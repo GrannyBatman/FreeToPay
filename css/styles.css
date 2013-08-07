@@ -1367,7 +1367,7 @@ td {
 
 /*--------------- jQuery-UI datepicker ---------------*/
 .ui-datepicker {
-	margin: 13px 0 0 -100px;
+	margin: 13px 0 0 0;
 	padding: 0;
 	width: auto;
 	border: none;
@@ -1504,29 +1504,18 @@ td {
 .datepicker-btn {
 	display: inline-block;
 	border: none;
+	width: 65px;
 	color: #000;	
 	cursor: pointer;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 65px;
-	height: 100%;
-	opacity: 0;
-}
-
-.datepicker-box .inp_text {
-	color: #000;
 	font-size: 12px;
 	line-height: 1;
-	display: inline-block;
+	font-family: inherit;
 }
 
-.datepicker-box:hover .inp_text,
-.datepicker-box:focus .inp_text,
-.datepicker-btn:focus + .inp_text {
+.datepicker-btn-active,
+.datepicker-box:hover .datepicker-btn {
 	color: #0096ff;
 }
-
 
 
 /*--------------- radio buttons and checkboxes ---------------*/
@@ -2859,7 +2848,8 @@ start 06_статистика
 }
 .period .datepicker-btn {
 	width: 85px;
-	background: #fff;
+	color: #0096ff;
+	font-size: 16px;
 }
 .period .datepicker-box:first-child {
 	margin-right: 10px;
@@ -2877,10 +2867,6 @@ start 06_статистика
 	font-family: 'pt_sansregular';
 	line-height: 25px;
 	font-weight: normal;
-}
-.period .inp_text {
-	color: #0096ff;
-	font-size: 16px;
 }
 .schedule.statistics {
 	margin-top: 47px;
