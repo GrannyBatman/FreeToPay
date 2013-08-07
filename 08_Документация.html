@@ -31,339 +31,133 @@
 			<div class="statistics-wrap short">
 				<h3 class="statistics-box-heading">Документация</h3>
 			</div>
-			<div class="doc_nav_wrap">
-				<a href="#" class="doc_nav">интеграция бесплатных предложений</a>
-				<a href="#" class="doc_nav">интеграция бесплатных предложений</a>
+			<div class="doc-nav-wrap">
+				<a href="#" class="doc_nav active">интеграция бесплатных предложений</a>
+				<a href="#" class="doc_nav">интеграция платных предложений</a>
 			</div>
-			<div class="clear"></div>
-				
-			
+			<div class="clear"></div>		
 		</div>
 
 		<div id="content">
-			<img class="schedule" src="uploads/schedule-8.jpg" alt="schedule">
-			<div class="day-statistics">
-				<h4 class="statistics-title">Статистика по дням</h4>
-				<a href="#" class="download-statistics">Выгрузить в <span>Excel</span></a>
+			<!-- start tabs -->
+			<div class="tabsBox">
+				<ul class="tabs documentation clearfix">
+					<li><a href="#">Введение</a></li>
+					<li><a href="#">Регистрационные данные рекламодателя</a></li>
+					<li class="tabs-active"><a href="#">Механизм работы  FreetoPay  с рекламодателями</a></li>
+					<li><a href="#">«Приземление» пользователей на сайте  рекламодателя</a></li>
+					<li><a href="#">Оповещение FreetoPay о  выполненном рекламном  предложении</a></li>
+				</ul>
+				<ul class="tabs-content">
+					<li>
+						<h3 class="tabs-content-title">Введение</h3>
+						<p class="tabs-content-text first">
+							Система FreetoPay сотрудничает с социальными сетями, играми и доутими проектами, которые предусматривают получение пользователями виртуальных бонусов за реальные деньги. Наша система является альтернативой для получения этих бонусов. Вместо того, чтобы производить электронный платеж, пользователю предлагается выполнить рекламные предложения наших партнеров. Для этого мы предоставляем список из нескольких предложений, отобранных соответственно полу, возрасту, месту проживания и предпочтениям пользователя. Вь брав понравившееся ему предложение, пользователь попадает на сайт рекламодателя, где требуется совершить заданное действие (заре-истрироваться. заполнить опрос, совершить покупку)
+						</p>
+						<p class="tabs-content-text">
+							Рекламные предложения в системе FreetoPay разделяются на платные и бесплатные. Бесплатными язляются те предложения, для прохождения которых, пользователю не требуется платить (от пользователя требуется пройти регистрацию на сайте, заполнить анкету). К платным предложениям относятся те. для выполнения которых пользователь должен заплатить рекламодателю (сделать покупку в интернет- магазине. оформить платную подписку).
+						</p>
+						<p class="tabs-content-text">
+							Ниже описан механизм интеграции для бесплатных предложений рекламодателя.
+						</p>
+					</li>
+					<li>
+						<h3 class="tabs-content-title">Регистрационные данные рекламодателя</h3>
+						<p class="tabs-content-text first">
+							Каждый зарегистрированный в системе FreetoPay рекламодатель получает логин и пароль для входа в личную панель управления. В панели управления рекламодатель может регистрировать в системе FreetoPay свои рекламные предложения.
+						</p>
+						<br /><br />
+						<h4 class="tabs-content-text-list-title">Для регистрации рекламного предложения, нужно указать следующие данные:</h4>
+						<ul class="tabs-content-text-list">						
+							<li>Название рекламного предложения (его увидит пользователь на странице выбора предложений)</li>
+							<li>Адрес LandingURL страницы с рекламным предложением, на которую будут перенаправляться пользователи</li>	
+							<li>E-mail адрес для связи с работниками рекламодателя в случае возникновения технических неполадок связанных с данным предложением</li>	
+							<li>Краткое описание и инструкция для пользователя по выполнению предложения. Несколько строк текста с указанием на то что конкретно должен сделать пользователь на сайте, куда ведет рекламное предложение (заполнить анкету, зарегистрироваться)</li>	
+							<li>Стоимость (в рублях) выполнения рекламного предложения. Те это сумма, которую FreetoPay получает за каждого приведенного к рекламодателю пользователя, который успешно выполнит рекламное предложение (т е. сделает все согласно инструкции из предыдущего пункта)</li>		
+							<li>Данные о целевой аудитории, на которую направлено предложение Возраст (минимум, максимум) пользователя, пол (мужской, женский, любой) пользователя и список городов, на которые нацелено это предложение</li>	
+								
+						</ul>
+						<h4 class="tabs-content-text-list-title right">После регистрации рекламного предложения рекламодатель получит</h4>
+						<ul class="tabs-content-text-list">
+							<li>Уникальный идентификатор Offerjd рекламного предложения</li>
+							<li>Секретный код ApiSecretKeyAdv</li>
+						</ul>
+					</li>
+					<li>
+						<h3 class="tabs-content-title">Механизм работы FreetoPay с рекламодателями</h3>
+						<p class="tabs-content-text">
+							Когда пользователь выбирает ваше рекламное предложение. FreetoPay перенаправляет его на сайт рекламодателя по адресу LandingURL. указывая в параметрах GET запроса fp_uid=FreetoPayUser_id. Где FreetoPayUserJd - уникальный идентификатор пользователя в системе F-eetoPay. Затем пользователь осуществляет переходы по страницам сайта рекламодателя, заполняет различные формы и т.п.
+						<br />
+							Если пользователь выполняет все требования рвкламно-о предложения, которое он выбрал, то рекламодатель должен передать информацию об успешном заврешении пользователем рекламного предложения Эта информация должна быть передана с помощью запроса методом GET на адрес http:/.'freetopay ru/adv/ofler_comp!ete php с параметрами, указывающими уникальный идентификатор пользователя FreetoPayUserJd и идентификатор выполненного предложения Offerjd. Более подробно параметры запроса описаны ниже
+						<br />
+							Стоит заметить, что для таких рекламных предложений как заполнение опросов, анкет, подписка на рассылку и прочих бесплатных для пользователя предложений такой механизм реализуется достаточно просто, так как после заполнения анкеты или оформления подписки пользователь чаще всего перенаправляется на страницу, подтверждающую правильность введенных данных. При генерации этой страницы можно легко передать запрос на сервер FreetoPay с оповещением о выполнении пользователем рекламного предложения.
+						<br />
+							Рассмотрим вариант, когда вы зарегистрировали в качестве рекламного предложения опрос находящийся по адресу http://my_poII.ru /poll.php. Если пользователь, просматривающий список доступных ему рекламных редложений, выбирает ваше, то FreetoPay присзаизает пользователю уникальный идентификатор FreetoPayUserJd равный, например. 100500 и перенаправляет его на вашу страницу по адоесу http://my_poll.ru/'poll.php?fp_uid=100500. Скрипт poll.php должен каким-либо образом соотнести значение fp_uic=100500 и пришедшего пользователя, чтобы в случае успешного выполнения им рекламного предложения оповестить об этом FreetoPay (наиболее простой способ - записать значение fp_uid=100500 пользователю в cookies). Если пользователь отвечает на все вопросы и заполняет нужные формы, то в результате он попадает на вашем сайте на страницу http://my_poll,ru.'poll Jinish.php. То что пользователь попал на эту страницу, означает что он выполнил все предъявленные к нему требования и завершил выполнение рекламного предложения. Значит нужно послать соответствующий запрос серверу FreetoPay. Это может сделать, например, сам скрипт polljinish.php перед генерацией HTML-кода страницы.
+						</p>
+					</li>
+					<li>
+						<h3 class="tabs-content-title">«Приземление» пользователей на сайте рекламодателя</h3>
+						<p class="tabs-content-text">
+							FreetoPay направляет пользователей на ваш сайт по указанному <span>LandingURL</span>. добавляя в параметрах <span>GET</span> запроса 
+							<span>fp_uid=FreetcPayUseJd</span>
+							
+							Где <span>FreetoPayUserJd</span> — уникальный идентификатор (натурально число) пользователя в системе FreetoPay
+				
+							Если вы указали <span>LandingURL</span> равный <span>'http://mysite.ru/index.php?par1ner=freetopay</span>. то пользователь будет навправлен по адресу <span>http://mysite.rufincex.php?partner=freetopay&fp_uid=FreetoPayUserJd</span>. 
+				
+							Значение <span>FreetoPayUserJd</span> стоит записать пользователю в <span>Cookies</span>, для того чтобы оповестить FreetoPay в случае если он успешно выполнит рекламное предложение
+						</p>
+					</li>
+					<li>
+						<h3 class="tabs-content-title">Оповещение FreetoPay о выполненном рекламном предложении</h3>
+						<p class="tabs-content-text">
+							Если у вас появляется инфрмация что пользователь, пришедший к вам от FreetoPay и имеющий идентификатор FreetoPayUserJd, выполнил ваше рекламное предложение, то на сервер FreetoPay должен быть передан соответствующий запрос. Этот запрос выполняется методом <span>GET</span> на адрес <span>http://freetopay ru/adv/offer_comp!ete php</span> с параметрами
+						</p>
+						<ul class="tabs-content-text-list-bold">
+							<li>
+								<span>fp_uid=FreetoPayUserJd&</span>
+							</li>
+							<li>
+								<span>aid=Offer_d&</span>
+							</li>
+							<li>
+								<span>sig=CheckSum</span>
+							</li>
+						</ul>
+						<p class="tabs-content-text">
+							<span>FreetoPayUserJd —</span> идентификатор пользователя, который был передан при перенаправлении пользователя на Landing URL Offerjd — идентификатор рекламного предложения, которое прошел пользователь. Значение Offerjd для каждого вашего предложения можно найти в панели управления
+						</p>
+						<p class="tabs-content-text">
+							<span>Checksum —</span> контрольная сумма MD5 (строка, содержащая 32 символа 0-9 A-F в любом регистре, представляющая шестнадцатиричное число с 32 разрядами). Формируется из строки, содержащей параметры <span>FreetoPayUserJd. Offerjd</span> и секретный ключ <span>ApiSecretKeyAdv</span>, которые разделены символом двоеточия С:'). Те. если <span>fp_uiti=1005c0&aiti=101</span> и секретный ключ <span>ApiSecretKeyAdv оавен To-jSecretP.vd567'. то Checksum = rr,d5{-100500 101 TopSecretP.vd567) = 917310396766f2a6aeca1Pe2de9d3fb5</span>
+						</p>
+						<p class="tabs-content-text">
+							Факт получения FreetoPay данных об успешном выполнении рекламного предложения определяется по результату, который будет возвращен при совершении описанного выше запроса по адресу <span>http:>7freetopay.ru’acv/offe'_complete.php</span>. Результат должен содержать строки
+						</p>
+					</li>
+				</ul>
 			</div>
-			<!-- start big-table -->
-			<table class="big-table statistics-promo">
-				<thead>
-					<tr>
-						<td>
-							<div class="td-wrap-title">
-								<span class="big-table-title-text">Дата</span>
-								<a href="#" class="sort-table"></a>
-							</div>
-						</td>
-						<td>
-							<div class="td-wrap-title">
-								<span class="big-table-title-text">Увидели предложение</span>
-								<a href="#" class="sort-table"></a>
-							</div>
-						</td>
-						<td>
-							<div class="td-wrap-title">
-								<span class="big-table-title-text">Начали прохождение</span>
-								<a href="#" class="sort-table"></a>
-							</div>
-						</td>
-						<td>
-							<div class="td-wrap-title">
-								<span class="big-table-title-text">Закончили прохождение</span>
-								<a href="#" class="sort-table"></a>
-							</div>
-						</td>
-						<td>
-							<div class="td-wrap-title">
-								<span class="big-table-title-text">Счёт за это составляет</span>
-								<a href="#" class="sort-table"></a>
-							</div>
-						</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							2013–01–23
-						</td>
-						<td>
-							4 894
-						</td>
-						<td>
-							9 152
-						</td>
-						<td>
-							4 894
-						</td>
-						<td>
-							13 577.55
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–24
-						</td>
-						<td>
-							8 105
-						</td>
-						<td>
-							4 894
-						</td>
-						<td>
-							5 214
-						</td>
-						<td>
-							5 957.05
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–25
-						</td>
-						<td>
-							711
-						</td>
-						<td>
-							5 214
-						</td>
-						<td>
-							5 565
-						</td>
-						<td>
-							8 715.23
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–26
-						</td>
-						<td>
-							9 858
-						</td>
-						<td>
-							5 565
-						</td>
-						<td>
-							8 492
-						</td>
-						<td>
-							1 710.15
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–27
-						</td>
-						<td>
-							8 492
-						</td>
-						<td>
-							4 965
-						</td>
-						<td>
-							6 546
-						</td>
-						<td>
-							1 789.23
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–28
-						</td>
-						<td>
-							6 544
-						</td>
-						<td>
-							952
-						</td>
-						<td>
-							6 544
-						</td>
-						<td>
-							1 689.00
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–29
-						</td>
-						<td>
-							849
-						</td>
-						<td>
-							617
-						</td>
-						<td>
-							849
-						</td>
-						<td>
-							1 459.36
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–30
-						</td>
-						<td>
-							654
-						</td>
-						<td>
-							152
-						</td>
-						<td>
-							654
-						</td>
-						<td>
-							1 268.30
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–30
-						</td>
-						<td>
-							8 549
-						</td>
-						<td>
-							105
-						</td>
-						<td>
-							8 549
-						</td>
-						<td>
-							1 710.15
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–30
-						</td>
-						<td>
-							656
-						</td>
-						<td>
-							11
-						</td>
-						<td>
-							656
-						</td>
-						<td>
-							1 789.23
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–30
-						</td>
-						<td>
-							84
-						</td>
-						<td>
-							858
-						</td>
-						<td>
-							84
-						</td>
-						<td>
-							1 689.00
-						</td>
-					</tr>
-					<tr>
-						<td>
-							2013–01–30
-						</td>
-						<td>
-							9 984
-						</td>
-						<td>
-							657
-						</td>
-						<td>
-							9 984
-						</td>
-						<td>
-							1 459.36
-						</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="5">
-							<!-- start pager -->
-							<div class="pager">
-								<div class="pager-col">
-									<a href="#" class="pager-prev-article pager-disabled">Назад</a>
-									<a href="#" class="pager-prev-article pager-disabled first">Первая</a>
-									<div class="clear"></div>
-								</div>
-								<div class="pager-col">
-									<a href="#" class="pager-prev-btn pager-disabled"></a>
-									<ul class="pager-buttons">
-										<li><span class="disabled">1</span></li>
-										<li><span>2</span></li>
-										<li><span>3</span></li>
-										<li><span>4</span></li>
-										<li><span>5</span></li>
-										<li><span>6</span></li>
-										<li><span>7</span></li>
-									</ul>
-									<a href="#" class="pager-next-btn"></a>
-								</div>
-								<div class="pager-col">
-									<a href="#" class="pager-next-article">Вперед</a>
-									<a href="#" class="pager-next-article last">Последняя</a>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<!-- end pager -->
-							<div class="drop-list-box-text">
-								<small>Строк на странице</small>
-								<b>30</b>
-								<div class="drop-list-box drop-list-box-large">
-									<a href="#" class="drop-list-btn"></a>
-									<div class="drop-list-wrap">
-										<div class="scroll-box">
-											<ul class="drop-list">
-												<li><a href="#">31</a></li>
-												<li><a href="#">32</a></li>
-												<li><a href="#">33</a></li>
-												<li><a href="#">34</a></li>
-												<li><a href="#">35</a></li>
-												<li><a href="#">33</a></li>
-												<li><a href="#">37</a></li>
-												<li><a href="#">38</a></li>
-												<li><a href="#">39</a></li>
-												<li><a href="#">40</a></li>
-												<li><a href="#">41</a></li>
-												<li><a href="#">42</a></li>
-												<li><a href="#">43</a></li>
-												<li><a href="#">44</a></li>
-												<li><a href="#">45</a></li>								
-											</ul>
-										</div>
-										<span class="drop-list-box-arrow"></span>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</td>
-					</tr>
-				</tfoot>
-			</table>
-			<!-- end big-table -->
-
-			<div class="statistics-promo-wrap">
-				<h3 class="statistics-box-heading">Портрет аудитории</h3>
-				<h4 class="statistics-box-qualification">по офферу «Intel OLD»</h4>
+			<!-- end tabs -->
+			<!-- start pager -->
+			<div class="pager doc">
+				<div class="pager-col pager-col-first">
+					<a href="#" class="pager-prev-article pager-disabled">Введение</a>
+				</div>
+				<div class="pager-col">
+					<a href="#" class="pager-prev-btn pager-disabled"></a>
+					<ul class="pager-buttons">
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a class="pager-button-active" href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+					<a href="#" class="pager-next-btn"></a>
+				</div>
+				<div class="pager-col pager-col-last">
+					<a href="#" class="pager-next-article">Регистрационные данные рекламодателя</a>
+				</div>
 			</div>
-			<img class="schedule" src="uploads/schedule-9.jpg" alt="schedule" />
-			<h4 class="statistics-box-sub-title">По полу и возрасту</h4>
-			<img class="schedule" src="uploads/schedule-10.jpg" alt="schedule" />
-			<img class="schedule" src="uploads/schedule-11.jpg" alt="schedule" />
-			<h4 class="statistics-box-sub-title">По городу</h4>
-			<img class="schedule" src="uploads/schedule-12.jpg" alt="schedule" />
+			<!-- end pager -->
 			
 			<a href="#" class="scroll-top-button">В начало</a>
 		</div>

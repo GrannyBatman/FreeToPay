@@ -118,6 +118,29 @@ $(document).ready(function() {
 		}
 	});
 
+	// //--------------- табы на стр 08_Документация ---------------
+	// $('.tabsBox').each(function(){
+	// 	var $this = $(this),
+	// 		control = $('> .tabs.documentation li, > * > .tabs.documentation li', $this),
+	// 		pos = 0;
+	// 	$('> .tabs-content > li, > * > .tabs-content > li', $this).first().siblings().hide();
+
+	// 	control.click(function(){
+	// 		$(this).addClass('tabs-active').siblings().removeClass('tabs-active');
+	// 		pos = $(this).index();
+	// 		$('> .tabs-content > li, > * > .tabs-content > li', $this).eq(pos).show().siblings().hide();
+	// 		return false;
+	// 	})
+	// });
+
+	// таблица 
+	// позиция подсказки
+	$('.big-table .hint-block').each(function(){
+		$(this).css({
+			'margin-left': - $(this).outerWidth(true) / 2 - 6
+		});
+
+	});
 
 
 

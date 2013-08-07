@@ -1037,7 +1037,7 @@ td {
 	right: 5px;
 }
 .big-table thead tr td + td + td .sort-table {
-	right: 7px;
+	right: -13px;
 	margin-top: -3px;
 }
 .big-table thead tr td + td + td + td .sort-table {
@@ -1150,12 +1150,12 @@ td {
 }
 .td-wrap-title {
 	position: relative;
-	padding: 0 20px 0 0px;
+	/*padding: 0 20px 0 0px;*/
 	display: inline-block;
 }
 .big-table-title-text {
 	display: inline-block;
-	margin: 10px 0 10px 0;
+	margin: 10px 25px 10px 0;
 }
 .td-wrap-title .button-vk {
 	margin-top: 10px;
@@ -2188,6 +2188,7 @@ a.secondary-nav-active {
 	line-height: 1;
 	display: block;
 	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
 .pager-prev-article:hover,
@@ -2679,8 +2680,8 @@ start vk_index
 .hint-block {
 	display: none;
 	position: absolute;
-	bottom: -64px;
-	left: -150%;
+	top: 50px;
+	left: 100%;
 	z-index: 3;
 	padding: 10px 18px 12px 14px;
 	background: #fff;
@@ -2747,9 +2748,9 @@ start 06_статистика
 .period .datepicker-list {
 	margin: 10px 10px 0 0;
 }
-/*.period .inp_text, .period .datepicker-btn {
-	width: 82px;
-}*/
+.period .datepicker-btn {
+	width: 85px;
+}
 .period .datepicker-box:first-child {
 	margin-right: 10px;
 }
@@ -2776,85 +2777,60 @@ start 06_статистика
 	margin-bottom: 36px;
 }
 /* таблица */
+.big-table.statistics .big-table-title-text {
+	margin: 6px 25px 22px 0;
+}
 .big-table.statistics td {
-	/*width: 233px;*/
 	width: 25%;
 }
 .big-table.statistics td + td {
-	/*width: 106px;*/
 	width: 11.6%;
 }
 .big-table.statistics td + td + td {
-	/*width: 90px;*/
 	width: 10.7%;
 }
 .big-table.statistics td + td + td + td  {
-	/*width: 63px;*/
 	width: 8.4%;
 }
 .big-table.statistics td + td + td + td + td {
-	/*width: 76px;*/
 	width: 9.4%;
 }
 .big-table.statistics td + td + td + td + td + td {
-	/*width: 87px;*/
 	width: 10.7%;
 }
 .big-table.statistics td + td + td + td + td + td + td {
-	/*width: 92px;*/
 	width: 11.2%;
 }
 .big-table.statistics td + td + td + td + td + td + td + td {
-	/*width: 115px;*/
 	width: 12.9%;
 }
-
-/*.table-content-wrap td{
-	width: auto;
-}*/
 /*--всплыв таблица---*/
 .table-content.statics, .big-table.statistics {
 	width: 100%;
 }
 .table-content.statics td {
-	/*width: 191px;*/
-	/*width: 19.5%;*/
 	width: 24.89%;
 }
 @-moz-document url-prefix() { .table-content.statics td { width: 25.05%; } } 
 .table-content.statics td + td {
-	/*width: 105px;*/
-	/*width: 10.7%;*/
 	width: 11.6%;
 }
 .table-content.statics td + td + td {
-	/*width: 96px;	*/
-	/*width: 9.8%;*/
 	width: 10.71%;
 }
 .table-content.statics td + td + td + td {
-	/*width: 69px;*/
-	/*width: 7%;*/
 	width: 8.4%;
 }
 .table-content.statics td + td + td + td + td {
-	/*width: 76px;*/
-	/*width: 7.8%;*/
 	width: 9.4%;
 }
 .table-content.statics td + td + td + td + td + td {
-	/*width: 98px;*/
-	/*width: 10%;*/
 	width: 10.7%;
 }
 .table-content.statics td + td + td + td + td + td + td {
-	/*width: 98px;*/
-	/*width: 10%;*/
 	width: 11.2%;
 }
 .table-content.statics td + td + td + td + td + td + td + td {
-	/*width: 119px;*/
-	/*width: 12.1%;*/
 	width: 12.9%;
 }
 @-moz-document url-prefix() { .table-content.statics td + td + td + td + td + td + td + td { width: 12.87%; } }
@@ -2868,10 +2844,10 @@ start 06_статистика
 	padding: 16px 20px 0px 5px;
 }
 .big-table.statistics td + td .td-wrap-title {
-	padding: 26px 20px 0px 5px;
+	padding: 22px 20px 22px 5px;
 }
 .big-table.statistics td:last-child .td-wrap-title {
-	padding: 19px 20px 0px 5px;
+	padding: 15px 20px 14px 5px;
 }
 .big-table.statistics tfoot tr td {
 	border-top: 1px solid #c5c5c1;
@@ -2887,16 +2863,16 @@ start 06_статистика
 	padding: 20px 0 0 51px;
 }
 .big-table.statistics thead tr td .sort-table {
-	right: -1px;
-	margin-top: 3px;
+	right: 30px;
+	margin-top: -5px;
 }
 .big-table.statistics thead tr td + td .sort-table {
-	right: -1px;
-	margin-top: 7px;
+	right: 7px;
+	margin-top: -5px;
 }
 .big-table.statistics thead tr td:last-child .sort-table {
 	right: 18px;
-	margin-top: 4px;
+	margin-top: -5px;
 }
 .big-table.statistics tbody tr td + td {
 	padding: 15px 0 15px 19px;
@@ -3025,6 +3001,7 @@ start 11_Статистика_Рекламных_Предложений
 }
 .big-table.statistics-promo thead tr td + td + td .sort-table {
 	margin-top: -6px;
+	right: 5px;
 }
 /*tfoot*/
 .big-table.statistics-promo tfoot {
@@ -3125,21 +3102,110 @@ end 11_Статистика_Рекламных_Предложений
 /*------------------------------------------------------------------------------------------------------------
 start 08_Документация
 -------------------------------------------------------------------------------------------------------------*/
-.doc_nav_wrap {
+.doc-nav-wrap {
+	margin: 31px 0 0 11px;
 	float: left;
 	display: inline-block;
 	overflow: hidden;
 }
-.doc_nav_wrap .doc_nav {
+.doc-nav-wrap .doc_nav {
 	float: left;
-	margin: 0 0 0 50px;
+	margin: 0 0 0 67px;
 }
-.doc_nav_wrap .doc_nav:first-child {
+.doc-nav-wrap .doc_nav:first-child {
 	margin: 0;
 }
 .statistics-wrap.short {
 	width: 290px;
 }
+.tabs.documentation {
+	margin: 37px 0 0 20px;
+}
+.tabs-content {
+	margin: 43px 0 0 38px;
+}
+.tabs-content > li {
+	margin: 58px 0 0 0;
+}
+.tabs-content > li:first-child {
+	margin: 0 0 0 0;
+}
+.tabs-content-title {
+	color: #000;
+	font-size: 24px;
+	font-weight: normal;
+	font-family: 'pt_sansbold';
+}
+.tabs-content-text {
+	margin: 23px 0 0 0;
+	color: #000;
+	font-family: 'pt_sansregular';
+	font-size: 16px;
+	line-height: 23px;
+}
+.tabs-content-text.first {
+	margin: 16px 0 0 0;
+}
+.tabs-content-text-list {
+	margin: 7px 0 0 0;
+}
+.tabs-content-text-list li {
+	margin: 3px 0 0 54px;
+	list-style: disc;
+}
+.tabs-content-text-list-title {
+	font-weight: normal;
+}
+.tabs-content-text-list-title.right {
+	margin-left: 35px;
+}
+.tabs-content-text span {
+	font-weight: bold;
+}
+.tabs-content-text-list-bold {
+	margin: 35px 0 0 0;
+}
+.tabs-content-text-list-bold li span {
+	font-weight: bold;
+}
+.pager.doc {
+	margin: 60px 0 0 0;
+}
 /*------------------------------------------------------------------------------------------------------------
 end 08_Документация
+-------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------
+start 09_Информация_по_Рекламному_Предложению
+-------------------------------------------------------------------------------------------------------------*/
+.info_wrap {
+	margin: 0 0 0 19px;
+}
+.promotional-offer {
+	overflow: hidden;
+	margin: 10px 0 0 19px;
+}
+.promotional-offer li {
+	float: left;
+	width: 33%;
+	border:1px solid #c5c5c2;
+	border-right: none;
+	background: #fffae6;
+	text-align: center;
+	color: #000;
+	font-size: 16px;
+	padding: 25px 0 25px 0;
+}
+.promotional-offer li:last-child {
+	border-right: 1px solid #c5c5c2;
+}
+.promotional-offer-small {
+	font-size: 11px;
+	display: block;
+}
+.promotional-offer-important {
+	display: block;
+	font-family: 'pt_sansbold';
+}
+/*------------------------------------------------------------------------------------------------------------
+end 09_Информация_по_Рекламному_Предложению
 -------------------------------------------------------------------------------------------------------------*/
