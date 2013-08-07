@@ -493,10 +493,11 @@ a {
 }
 
 .range-slider-box .range-slider-hint {
-	padding: 7px 17px 8px 19px;
+	padding: 7px 17px 9px 19px;
 	bottom: 100%;
 	left: 50%;
-	margin: 0 0 18px -50px;
+	top: auto;
+	margin: 0 0 17px -50px;
 	text-align: center;
 	white-space: nowrap;
 	font-size: 16px;
