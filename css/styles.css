@@ -3259,11 +3259,14 @@ end 08_Документация
 start 09_Информация_по_Рекламному_Предложению
 -------------------------------------------------------------------------------------------------------------*/
 .info_wrap {
-	margin: 0 0 0 19px;
+	margin: 17px 0 0 19px;
+}
+.info_wrap .statistics-box-qualification {
+	margin: 4px 0 0 0;
 }
 .promotional-offer {
 	overflow: hidden;
-	margin: 10px 0 0 19px;
+	margin: 28px 0 0 19px;
 }
 .promotional-offer li {
 	float: left;
@@ -3274,7 +3277,7 @@ start 09_Информация_по_Рекламному_Предложению
 	text-align: center;
 	color: #000;
 	font-size: 16px;
-	padding: 25px 0 25px 0;
+	padding: 20px 0 20px 0;
 }
 .promotional-offer li:last-child {
 	border-right: 1px solid #c5c5c2;
@@ -3286,6 +3289,76 @@ start 09_Информация_по_Рекламному_Предложению
 .promotional-offer-important {
 	display: block;
 	font-family: 'pt_sansbold';
+}
+.statistics-box-sub-title.blue {
+	margin: 50px 0 0 19px;
+	color: #4595ac;
+	padding-bottom: 20px;
+	border-bottom: 3px solid #4595ac;
+}
+.information-settings {
+	margin: -5px 0 0 19px;
+}
+.information-settings >	 li {
+	overflow: hidden;
+	border-top: 1px solid #dcddde;
+	padding: 23px 0 23px 0;
+}
+.information-settings > li:first-child {
+	border: none;
+	padding: 28px 0 28px 0;
+}
+.information-settings-title {
+	float: left;
+	font-family: 'pt_sansregular';
+	color: #000;
+	font-size: 14px;
+	display: inline-block;
+	width: 200px;
+	margin: 0 20px 0 20px;
+}
+.information-settings-text {
+	float: left;
+	font-family: 'pt_sansbold';
+	color: #000;
+	font-size: 16px;
+	display: inline-block;
+	width: 700px;
+}
+.information-settings-text-wrap {
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+.information-settings-text-wrap .big-table-button {
+	float: left;
+}
+.information-settings-text-wrap .information-settings-text {
+	float: left;
+	margin: 0 0 0 20px;
+	width: 200px;
+	max-width: 390px;
+}
+.information-settings li .button {
+	float: left;
+	margin: -5px 0 0 20px;
+}
+.information-settings-list-wrap {
+	display: inline-block;
+	width: 140px;
+	float: left;
+}
+.information-settings-list-wrap .information-settings-text {
+	float: none;
+}
+.information-settings-text-list {
+	margin: 7px 0 0 0;
+}
+.information-settings-text-list li:first-child {
+	margin-top: 0;
+}
+.information-settings-text-list li {
+	margin-top: 1px;
 }
 /*------------------------------------------------------------------------------------------------------------
 end 09_Информация_по_Рекламному_Предложению
