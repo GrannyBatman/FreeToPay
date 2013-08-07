@@ -724,6 +724,8 @@ td {
 }
 
 #logo {
+	width: 108px;
+	height: 22px;
 	float: left;
 	margin: 11px 40px 0 1px;
 }
@@ -2314,20 +2316,34 @@ a.secondary-nav-active {
 	margin-left: 0;
 }
 
-.pager-buttons a {
+.pager-btn {
 	width: 12px;
 	height: 12px;
 	display: block;
 	background: url(../img/sprite.png) -40px -600px no-repeat;
 }
 
-.pager-buttons a:hover {
+.pager-btn:hover {
 	background-position: 0 -640px;
 }
 
-.pager-buttons .pager-button-active,
-.pager-buttons .pager-button-active:hover {
+.pager-btn-active,
+.pager-btn-active:hover {
 	background-position: 0 -680px;
+}
+
+.pager-numeric-btn {
+	font-size: 14px;
+	color: #000;
+}
+
+.pager-numeric-btn:hover {
+	color: #42a6ff;
+}
+
+.pager-buttons span {
+	cursor: default;
+	letter-spacing: 1px;
 }
 
 .pager-disabled {
@@ -2610,7 +2626,7 @@ a.secondary-nav-active {
 .popup-message a {
 	color: #0096ff;
 	padding-left: 15px;
-	background: url(../img/sprite.png) -1989px -1593px no-repeat;
+	background: url(../img/sprite.png) -1989px -1633px no-repeat;
 }
 
 .popup .error-box {
@@ -3158,13 +3174,6 @@ start 11_Статистика_Рекламных_Предложений
 .big-table.statistics-promo tfoot .pager-buttons li span {
 	margin: 0px 0 0 0px;
 }
-.pager-buttons span {
-	cursor: pointer;
-	font-size: 14px;
-}
-.pager-buttons span.disabled {
-	color: #bfbfbf;
-}
 .statistics-box-sub-title {
 	color: #4c4b4b;
 	font-size: 14px;
@@ -3363,3 +3372,4 @@ start 09_Информация_по_Рекламному_Предложению
 /*------------------------------------------------------------------------------------------------------------
 end 09_Информация_по_Рекламному_Предложению
 -------------------------------------------------------------------------------------------------------------*/
+
