@@ -227,18 +227,27 @@ a {
 }
 
 .add-content-body > div {
+	margin-bottom: 34px;
+}
+
+.add-content-box-float .add-content-body > div {
 	margin-bottom: 21px;
 }
 
 .add-content-label {
 	float: left;
-	width: 160px;
-	padding: 9px 10px 0 14px;
+	width: 240px;
+	padding: 9px 20px 0 18px;
 	font-size: 14px;
 	line-height: 17px;
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;   
 	box-sizing: border-box; 
+}
+
+.add-content-box-float .add-content-label {
+	width: 160px;
+	padding-left: 14px;
 }
 
 .add-content-label span {
@@ -249,8 +258,12 @@ a {
 }
 
 .add-content-data {
-	width: 620px;
+	width: 700px;
 	float: left;
+}
+
+.add-content-box-float .add-content-data {
+	width: 620px;
 }
 
 .add-content-top-indent {
@@ -281,7 +294,7 @@ a {
 	margin-top: 3px;
 }
 
-.add-content-box .add-content-row-center {
+.add-content-box .add-content-body .add-content-row-center {
 	margin-bottom: 34px;
 	text-align: center;
 }
@@ -401,7 +414,7 @@ a {
 }
 
 .add-content-data-age .custom-select-small {
-	margin-right: 22px;
+	margin-right: 3.6%;
 }
 
 .add-content-data-age .sbHolder ~ .sbHolder {
@@ -424,6 +437,10 @@ a {
 	margin: 0 15px 0 10px;
 }
 
+.add-content-box .switch {
+	margin-top: 8px;
+}
+
 .switch-wrap {
 	font-size: 11px;
 	color: #8b8b8b;
@@ -432,7 +449,7 @@ a {
 }
 
 .switch-wrap .switch {
-	margin-right: 8px;
+	margin: 0 8px 0 0;
 }
 
 .switch-wrap span {
@@ -545,6 +562,32 @@ a {
 
 .add-content-submit-box .button.big-success {
 	margin-top: 85px;
+}
+
+.add-content-confirm-box {
+	margin-top: 43px;
+}
+
+.add-content-confirm-box .button {
+	margin-top: 58px;
+}
+
+.add-content-confirm-box .button:first-child {
+	margin-right: 16px;
+}
+
+.add-content-link {
+	vertical-align: top;
+	margin-right: 16px;
+	line-height: 1;
+	display: inline-block;
+	font-size: 16px;
+	padding: 9px 0 0 0;
+	color: #0096ff;
+}
+
+.add-content-box .checkbox-btn-wrap {
+	margin-top: 19px;
 }
 
 
@@ -1571,6 +1614,10 @@ td {
 	background: #fff;
 }
 
+.custom-select-large {
+	width: 298px;
+}
+
 .custom-select-small {
 	width: 98px;
 }
@@ -1681,7 +1728,7 @@ td {
 }
 
 
-/*--------------- text inputs ---------------*/
+/*--------------- text inputs / textarea ---------------*/
 .text-input-wrap {
 	display: table-cell;
 }
@@ -1693,6 +1740,10 @@ td {
 
 .text-input-col:first-child {
 	padding-right: 11px;
+}
+
+.text-input-col-middle {
+	vertical-align: middle;
 }
 
 .text-input {
@@ -1709,6 +1760,10 @@ td {
 	background-color: #fff !important;
 }
 
+.text-input-large {
+	width: 620px;
+}
+
 .text-input-wide {
 	width: 593px;
 }
@@ -1717,9 +1772,14 @@ td {
 	width: 460px;
 }
 
+.text-input-average {
+	width: 140px;
+}
+
 .text-input-small {
 	width: 36px;
 }
+
 .text-input:hover,
 .text-input:focus {
 	border-color: #0096ff;
@@ -1784,8 +1844,13 @@ td {
 	vertical-align: top;
 }
 
-.numeric-input-small input {
+.numeric-input-medium input {
 	width: 94px;
+}
+
+.numeric-input-small input {
+	width: 61px;
+	padding: 0 9px;
 }
 
 .numeric-input-controls {
@@ -1819,8 +1884,23 @@ td {
 	background-color: #0096ff;
 }
 
+.textarea {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;
+	padding: 5px 11px;
+	width: 620px;
+	height: 140px;
+	border: 1px solid #c5c5c2;
+	background-color: #fff;
+	font-size: 16px; 
+	font-family: inherit;
+	line-height: 1.2;
+	resize: none;
+}
 
-/*--------------start buttons----------------*/
+
+/*-------------- start buttons ----------------*/
 .button {
 	display: inline-block;
 	background: #60bb46;
@@ -2681,7 +2761,7 @@ start vk_index
 	display: none;
 	position: absolute;
 	top: 50px;
-	left: 100%;
+	left: 50%;
 	z-index: 3;
 	padding: 10px 18px 12px 14px;
 	background: #fff;

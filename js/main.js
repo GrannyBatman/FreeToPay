@@ -133,21 +133,35 @@ $(document).ready(function() {
 	// 	})
 	// });
 
-	// таблица 
-	// позиция подсказки
-	$('.big-table .hint-block').each(function(){
-		$(this).css({
-			'margin-left': - $(this).outerWidth(true) / 2 - 6
-		});
 
-	});
+	// --------------- Смещение подсказки при наведении ---------------
+	$('.big-table').on('mouseenter', '.proj-controls-one', hintDisplace);
 
-
-
-
-
+	function hintDisplace(event) {
+		var self = this,
+			$hint =  $(this).find('.hint-block'),
+			hintWidth = $hint.outerWidth(),
+			$hintPointer = $hint.find('.hint-block-pointer'),
+			$parent = $(this).closest('.big-table'),
+			parentWidth = $parent.outerWidth();
 
 
+		// выход из функции т.к. элемент уже посещался
+		if ( $hint[0].hasAttribute('data-visited') )  return;
+
+		$hint.css('margin-left', -(hintWidth / 2) );
+
+		// определение смещения подсказки
+		var offsetLeft = Math.abs( $hint.offset().left - $parent.offset().left ),
+			distance = Math.abs( (offsetLeft + hintWidth + 2) - parentWidth );
+
+
+		// проверка смещения подсказки за пределы таблицы
+		if ( (offsetLeft + hintWidth) < parentWidth ) return;
+
+		$hint.attr('data-visited', 'visited').css('margin-left', '-=' + distance);
+		$hintPointer.css('margin-left', '+=' + distance);
+	}
 
 
 
