@@ -1072,6 +1072,17 @@ td {
 .big-table thead tr td:hover {
 	background-color: #e1eff9;
 }
+.big-table-title-decor {
+	display: inline-block;
+	border-left: 1px solid #dfdfde;
+	height: 20px;
+	position: absolute;
+	top: 9px;
+	right: 99px;
+}
+.td-wrapper {
+	position: relative;
+}
 .big-table thead tr td .sort-table {
 	display: none;
 	width: 8px;
@@ -1202,6 +1213,7 @@ td {
 .big-table-title-text {
 	display: inline-block;
 	margin: 10px 25px 10px 0;
+	max-width: 190px;
 }
 .td-wrap-title .button-vk {
 	margin-top: 10px;
@@ -2847,6 +2859,7 @@ start 06_статистика
 }
 .period .datepicker-btn {
 	width: 85px;
+	background: #fff;
 }
 .period .datepicker-box:first-child {
 	margin-right: 10px;
@@ -2995,6 +3008,12 @@ start 10_Рекламные_Предложения
 }
 .big-table.promotion {
 	margin: 47px 0 27px 0;
+}
+.big-table.promotion .big-table-title-text {
+	max-width: 170px;
+}
+.big-table.promotion thead tr td + td + td + td .sort-table {
+	right: 10px;
 }
 .big-table.promotion tbody tr {
 	height: 44px;
