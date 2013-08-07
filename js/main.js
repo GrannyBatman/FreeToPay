@@ -58,8 +58,12 @@ $(document).ready(function() {
 		dateFormat: "yy-mm-dd",
 		showOtherMonths: true,
         selectOtherMonths: true,
-        onSelect: function (string, object) {
-         	$(this).next().text(string);
+        beforeShow: function() {        
+        	$(this).addClass('datepicker-btn-active');
+        	$('#ui-datepicker-div').css('margin-left', -(130 - $(this).width() / 2) );
+        },
+        onClose: function () {
+        	$(this).removeClass('datepicker-btn-active');
         }
 	});
 
@@ -118,6 +122,8 @@ $(document).ready(function() {
 		}
 	});
 
+
+
 	// //--------------- табы на стр 08_Документация ---------------
 	// $('.tabsBox').each(function(){
 	// 	var $this = $(this),
@@ -132,6 +138,7 @@ $(document).ready(function() {
 	// 		return false;
 	// 	})
 	// });
+
 
 
 	// --------------- Смещение подсказки при наведении ---------------
