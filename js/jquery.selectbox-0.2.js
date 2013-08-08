@@ -301,6 +301,7 @@
 			sbHolder.insertAfter($target);
 			
 			$("html").on('mousedown', function(e) {
+				if (document.getElementsByClassName('sbToggleOpen').length === 0) return;				
 				e.stopPropagation();          
 				$("select").selectbox('close'); 
 			});

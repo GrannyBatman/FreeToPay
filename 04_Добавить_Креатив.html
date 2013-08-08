@@ -18,15 +18,11 @@
 	<!-- start mainarea -->
 	<div id="mainarea">
 		<!-- start header -->
-		<div id="header">
-			<!-- start nav-box -->
-			<div class="nav-box clearfix">
-				<a href="#" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
+		<div id="header" class="nav-box clearfix">
+			<a href="#" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
 
-				<a href="#" class="user-btn">Выйти</a>
-				<a href="#" class="user-login">tgb-bbdo@freetopay.ru</a>						
-			</div>
-			<!-- end nav-box -->
+			<a href="#" class="user-btn">Выйти</a>
+			<a href="#" class="user-login">tgb-bbdo@freetopay.ru</a>
 		</div>
 		<!-- end header -->
 
@@ -88,7 +84,9 @@
 						<label class="checkbox-btn"><input type="checkbox" name="ckeck"><b></b><span>Количество заголовков и изображений должно совпадать</span></label>
 					</div>
 					<div class="add-content-heading-box">
-						<h3 class="add-content-heading">Основной заголовок</h3>
+						<div class="add-content-heading">
+							<h3 class="add-content-heading-title">Основной заголовок</h3>
+						</div>	
 						<div>
 							<div class="add-content-label">Верхний заголовок</div>
 							<div class="add-content-data">
@@ -135,7 +133,10 @@
 					</div>
 
 					<div class="add-content-heading-box">
-						<h3 class="add-content-heading add-content-heading-extra">Дополнительный вариант 1</h3>
+						<div class="add-content-heading add-content-heading-extra">
+							<a href="#" class="button simple delete">Удалить</a>
+							<h3 class="add-content-heading-title">Дополнительный вариант 1</h3>							
+						</div>						
 						<div>
 							<div class="add-content-label">Верхний заголовок</div>
 							<div class="add-content-data">
@@ -178,8 +179,7 @@
 								</div>	
 							</div>
 							<div class="clear"></div>
-						</div>
-						<a href="#" class="button simple delete">Удалить</a>
+						</div>						
 					</div>
 					<div class="add-content-row-center"><a href="#" class="button">добавить дополнительный вариант</a></div>
 				</div>
@@ -336,9 +336,9 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div>
-						<div class="add-content-label add-content-top-indent">Время работы объявления <span>По МСК</span></div>
-						<div class="add-content-data add-content-top-indent">
+					<div class="add-content-top-indent">
+						<div class="add-content-label">Время работы объявления <span>По МСК</span></div>
+						<div class="add-content-data">
 							<div class="range-slider-box">
 								<div class="range-slider-wrap">
 									<div class="range-slider"></div>
