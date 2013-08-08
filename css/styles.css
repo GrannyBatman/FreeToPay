@@ -3148,15 +3148,6 @@ start 11_Статистика_Рекламных_Предложений
 .pager.table .pager-next-article, .pager.table .pager-prev-article {
 	margin: 2px 0 0 0;
 }
-.pager.table .pager-col:first-child {
-	margin-top: 7px;
-}
-.pager.table .pager-col:first-child + .pager-col {
-	margin-left: 10px;
-}
-.pager.table .pager-col:last-child {
-	margin-left: 10px;
-}
 .drop-list-box-text.table {
 	float: right;
 	margin-right: 35px;
@@ -3227,8 +3218,10 @@ start 08_Документация
 .doc-nav-wrap .doc_nav:first-child {
 	margin: 0;
 }
-.statistics-wrap.short {
+.statistics-box-heading.short {
 	width: 290px;
+	margin: 12px 0 0 20px;
+	float: left;
 }
 .tabs.documentation {
 	margin: 37px 0 0 20px;
@@ -3358,8 +3351,6 @@ start 09_Информация_по_Рекламному_Предложению
 	width: 700px;
 }
 .information-settings-text-wrap {
-	overflow: hidden;
-	display: inline-block;
 	float: left;
 }
 .information-settings-text-wrap .big-table-button {
