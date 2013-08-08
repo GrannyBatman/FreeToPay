@@ -1925,6 +1925,7 @@ td {
 	font-size: 10px;
 	text-transform: uppercase;
 	text-decoration: none;
+	cursor: pointer;
 }
 .button.no-bg {
 	background: none;
@@ -1962,9 +1963,20 @@ td {
 	padding-right: 35px;
 }
 .button.upload {
+	position: relative;
 	background: #0096ff url(../img/sprite.png) -1966px -470px no-repeat;
 	padding-left: 50px;
 	padding-right: 29px;
+	overflow: hidden;
+}
+.button.upload input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	z-index: -100;
 }
 .button.purple {
 	background: #bd4e6f;
@@ -3135,9 +3147,6 @@ start 11_Статистика_Рекламных_Предложений
 }
 .pager.table .pager-next-article, .pager.table .pager-prev-article {
 	margin: 2px 0 0 0;
-}
-.pager-col.next {
-	width: 50%;
 }
 .pager.table .pager-col:first-child {
 	margin-top: 7px;
