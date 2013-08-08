@@ -18,14 +18,15 @@
 	<!-- start mainarea -->
 	<div id="mainarea">
 
-		<div id="header">
+		<div id="header" class="nav-box">
 			<!-- start nav-box -->
-			<div class="nav-box clearfix">
-				<a href="#" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
-				<a href="#" class="user-btn">Выйти</a>
-				<a href="#" class="user-login">tgb-bbdo@freetopay.ru</a>						
-			</div>
+			<a href="#" id="logo" title="FreetoPay"><img src="img/logo.png" alt="logo"></a>
+			<a href="#" class="user-btn">Выйти</a>
+			<a href="#" class="user-login">tgb-bbdo@freetopay.ru</a>
 			<!-- end nav-box -->			
+		</div>
+
+		<div id="content">
 			<a href="#" class="go-back-link">Реклама «Вконтакте»</a>			
 			<div class="clear"></div>
 			<div class="statistics-wrap">
@@ -45,10 +46,6 @@
 				<a href="#" class="button border border-hover settings">Редактировать оффер </a>
 				<a href="#" class="button border border-hover info">информация </a>
 			</div>			
-			
-		</div>
-
-		<div id="content">
 			<img class="schedule" src="uploads/schedule-8.jpg" alt="schedule">
 			<div class="day-statistics">
 				<h4 class="statistics-title">Статистика по дням</h4>
@@ -298,35 +295,8 @@
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colspan="5">
-							<!-- start pager -->
-							<div class="pager">
-								<div class="pager-col">
-									<a href="#" class="pager-prev-article pager-disabled">Назад</a>
-									<a href="#" class="pager-prev-article pager-disabled first">Первая</a>
-									<div class="clear"></div>
-								</div>
-								<div class="pager-col">
-									<a href="#" class="pager-prev-btn pager-disabled"></a>
-									<ul class="pager-buttons">
-										<li><a class="pager-numeric-btn pager-disabled" href="#">1</a></li>
-										<li><a class="pager-numeric-btn" href="#">2</a></li>
-										<li><a class="pager-numeric-btn" href="#">3</a></li>
-										<li><a class="pager-numeric-btn" href="#">4</a></li>
-										<li><a class="pager-numeric-btn" href="#">5</a></li>
-										<li><span>...</span></li>
-										<li><a class="pager-numeric-btn" href="#">12</a></li>
-									</ul>
-									<a href="#" class="pager-next-btn"></a>
-								</div>
-								<div class="pager-col">
-									<a href="#" class="pager-next-article">Вперед</a>
-									<a href="#" class="pager-next-article last">Последняя</a>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<!-- end pager -->
-							<div class="drop-list-box-text">
+						<td colspan="5">							
+							<div class="drop-list-box-text table">
 								<small>Строк на странице</small>
 								<b>30</b>
 								<div class="drop-list-box drop-list-box-large">
@@ -355,6 +325,33 @@
 									</div>
 								</div>
 							</div>
+							<!-- start pager -->
+							<div class="pager table">
+								<div class="pager-col">
+									<a href="#" class="pager-prev-article pager-disabled">Назад</a>
+									<a href="#" class="pager-prev-article pager-disabled first">Первая</a>
+									<div class="clear"></div>
+								</div>
+								<div class="pager-col">
+									<a href="#" class="pager-prev-btn pager-disabled"></a>
+									<ul class="pager-buttons">
+										<li><a class="pager-numeric-btn pager-disabled" href="#">1</a></li>
+										<li><a class="pager-numeric-btn" href="#">2</a></li>
+										<li><a class="pager-numeric-btn" href="#">3</a></li>
+										<li><a class="pager-numeric-btn" href="#">4</a></li>
+										<li><a class="pager-numeric-btn" href="#">5</a></li>
+										<li><span>...</span></li>
+										<li><a class="pager-numeric-btn" href="#">12</a></li>
+									</ul>
+									<a href="#" class="pager-next-btn"></a>
+								</div>
+								<div class="pager-col next">
+									<a href="#" class="pager-next-article">Вперед</a>
+									<a href="#" class="pager-next-article last">Последняя</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<!-- end pager -->
 							<div class="clear"></div>
 						</td>
 					</tr>

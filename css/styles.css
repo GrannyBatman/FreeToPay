@@ -1162,6 +1162,9 @@ td {
 .big-table tbody tr:hover {
 	background: #e1f0fa;
 }
+.big-table tbody tr:hover .switch .mask {
+	background: url(../img/sprite.png) -560px -1600px no-repeat;
+}
 .big-table > tbody > tr:hover > td:first-child {
 	color: #0096ff;
 }
@@ -1901,6 +1904,7 @@ td {
 	font-family: inherit;
 	line-height: 1.2;
 	resize: none;
+	overflow: auto;
 }
 
 
@@ -2165,7 +2169,7 @@ td {
 	font-size: 18px;
 	font-weight: normal;
 }
-.project-view.orange .project-view-title a {
+.project-view.pause .project-view-title a {
 	color: #e7a83e;
 }
 
@@ -2270,7 +2274,7 @@ a.secondary-nav-active {
 .pager-next-article {
 	color: #000;
 	line-height: 1;
-	display: block;
+	display: inline-block;
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
@@ -2349,6 +2353,7 @@ a.secondary-nav-active {
 
 .pager-disabled {
 	opacity: 0.3;
+	cursor: default;
 }
 
 
@@ -3118,62 +3123,61 @@ start 11_Статистика_Рекламных_Предложений
 .big-table.statistics-promo tfoot tr:hover {
 	background-color: #e1eff9;
 }
-.big-table.statistics-promo tfoot .pager {
+.pager.table {
 	display: inline-block;
-	float: left;
-	width: 740px;
+	float: right;
+	width: 610px;
+	margin-left: 100px;
 }
-.big-table.statistics-promo tfoot .pager-col:first-child, .big-table.statistics-promo tfoot .pager-col:last-child {
-	width: 135px;
-	text-align: right;
-	display: inline-block;
-	float: left;
+.pager.table .pager-next-article, .pager.table .pager-prev-article {
+	margin: 2px 0 0 0;
 }
-.big-table.statistics-promo tfoot .pager-col:first-child {
-	margin-left: 222px;
+.pager-col.next {
+	width: 50%;
+}
+.pager.table .pager-col:first-child {
 	margin-top: 7px;
 }
-.big-table.statistics-promo tfoot .pager-col:first-child + .pager-col {
+.pager.table .pager-col:first-child + .pager-col {
 	margin-left: 10px;
 }
-.big-table.statistics-promo tfoot .pager-col:last-child {
+.pager.table .pager-col:last-child {
 	margin-left: 10px;
 }
-.big-table.statistics-promo tfoot .drop-list-box-text {
+.drop-list-box-text.table {
 	float: right;
 	margin-right: 35px;
-	margin-top: 6px;
+	margin-top: 5px;
 }
-.big-table.statistics-promo tfoot .drop-list-box-text small {
+.drop-list-box-text.table small {
 	margin-right: 4px;
 }
-.big-table.statistics-promo tfoot .pager-prev-article {
+.pager.table .pager-prev-article {
 	float: right;
 }
-.big-table.statistics-promo tfoot  .pager-buttons {
+.pager.table .pager-buttons {
 	margin: -2px 19px;
 }
-.big-table.statistics-promo tfoot .pager-disabled.first, .big-table.statistics-promo tfoot .pager-next-article {
+.pager.table .pager-disabled.first, .pager.table .pager-next-article {
 	border-right: 1px solid #838383;
 	padding-right: 8px;
 	margin-right: 8px;
 }
-.big-table.statistics-promo tfoot .pager-next-article.last {
+.pager.table .pager-next-article.last {
 	border:none;
 	padding-right: 0;
-	margin: 0;
 }
-.big-table.statistics-promo tfoot .pager-col span {
+.pager.table .pager-col span {
 	float: right;
 	margin: -8px 7px 0 7px;
 }
-.big-table.statistics-promo tfoot .pager-next-article{
+.pager.table .pager-next-article{
 	float: left;
 }
-.big-table.statistics-promo tfoot .pager-buttons li {
+.pager.table .pager-buttons li {
 	margin: 0px 0 0 8px;
 }
-.big-table.statistics-promo tfoot .pager-buttons li:first-child {
+.pager.table .pager-buttons li:first-child {
 	margin: 0;
 }
 .big-table.statistics-promo tfoot .pager-buttons li span {
@@ -3254,14 +3258,15 @@ start 08_Документация
 .tabs-content-text-list-title.right {
 	margin-left: 35px;
 }
-.tabs-content-text span {
-	font-weight: bold;
+.tabs-content-text span, .tabs-content-text-list-bold li span {
+	font-family: 'pt_sansbold';
+}
+.tabs-content-text i {
+	font-style: normal;
+	font-family: 'pt_sansitalic';
 }
 .tabs-content-text-list-bold {
 	margin: 35px 0 0 0;
-}
-.tabs-content-text-list-bold li span {
-	font-weight: bold;
 }
 .pager.doc {
 	margin: 60px 0 0 0;
@@ -3361,12 +3366,12 @@ start 09_Информация_по_Рекламному_Предложению
 	display: inline-block;
 	width: 140px;
 	float: left;
+	margin: 0 10px 0 0;
 }
 .information-settings-list-wrap .information-settings-text {
 	float: none;
-}
-.information-settings-text-list {
-	margin: 7px 0 0 0;
+	width: 140px;
+	margin: 0 0 10px 0;
 }
 .information-settings-text-list li:first-child {
 	margin-top: 0;
