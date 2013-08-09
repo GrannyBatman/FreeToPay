@@ -3391,3 +3391,130 @@ start 09_Информация_по_Рекламному_Предложению
 end 09_Информация_по_Рекламному_Предложению
 -------------------------------------------------------------------------------------------------------------*/
 
+
+
+/*—————————————————————————————————————————— Стили для Retina ——————————————————————————————————————————*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+
+	#logo {
+		background-size: 108px 22px;
+		background-image: url(../img/logo@2x.png);
+	} 
+
+	#logo img {
+		display: none;
+	}
+
+	.big-table thead tr td .sort-table {
+		background-size: 8px 13px;
+		background-image: url(../img/sort-table@2x.png);
+	}
+
+	.big-table thead tr td .sort-table.active,
+	.big-table thead tr td .sort-table:active {
+		background-size: 8px 13px;
+		background-image: url(../img/sort-table_hover@2x.png);
+	}
+
+
+	.multiple-input-delete,
+	.range-slider-hint:after,
+	.drop-list-box-arrow,
+	.drop-list-btn,
+	.user-btn,
+	.filter-btn span,
+	.drop-table,
+	.big-table tbody tr td:active .drop-table,
+	.big-table tbody tr td.active .drop-table,
+	.switch .background,
+	.switch .mask,
+	.big-table tbody tr:hover .switch .mask,
+	.switch.yes .background,
+	.switch.no .background,
+	.big-table-button.play,
+	.big-table-button.pause,
+	.big-table-button.off,
+	.big-table-button-arrow.down,
+	.big-table-button-arrow.up,
+	.big-table-button-arrow.down:hover,
+	.big-table-button-arrow.up:hover,
+	.project-control,
+	.project-control.information:hover,
+	.project-control.statistics,
+	.project-control.statistics:hover,
+	.project-control.editing,
+	.project-control.editing:hover,
+	.project-control.delete,
+	.project-control.delete:hover,
+	.project-control.off,
+	.project-control.off:hover,
+	.project-control.delete.red:hover,
+	.project-control.off.red:hover,
+	.ui-datepicker:after,
+	.ui-datepicker .ui-datepicker-prev,
+	.ui-datepicker .ui-datepicker-next,
+	.radio-btn b,
+	.checkbox-btn b,
+	.sbSelector.female,
+	.sbSelector.male,
+	.sbToggle,
+	.sbHolder a[rel="female"],
+	.sbHolder a[rel="male"],
+	.text-input-success,
+	.text-input-success:hover,
+	.text-input-success:focus,
+	.text-input-error,
+	.text-input-error:hover,
+	.text-input-error:focus,
+	.numeric-input-plus,
+	.numeric-input-minus,
+	.button.add,
+	.button.refresh,
+	.add_big-button,
+	.button.breack,
+	.button.upload,
+	.button.delete,
+	.button.return,
+	.button.add-simple,
+	.button.statistics,
+	.button.big-success,
+	.button.success,
+	.button.breack:hover,
+	.button.statistics:hover,
+	.button.settings,
+	.button.settings:hover,
+	.button.info,
+	.button.info:hover,
+	.button-suspense,
+	.secondary-nav a,
+	.pager-prev-btn,
+	.pager-next-btn,
+	.pager-btn,
+	.scroll-top-button,
+	.tabs li:after,
+	.error-title-icon,
+	.popup-close-btn,
+	.popup-message a,
+	.popup-confirm:after,
+	.popup-warning:after,
+	.popup-success:after,
+	.popup-error:after,
+	.button-vk,
+	.hint-block-pointer,
+	.go-back-link,
+	.download-statistics {
+		background-size: 2000px 2000px;
+		background-image: url(../img/sprite@2x.png);
+	}
+	
+	
+}
+
+ 
