@@ -50,25 +50,28 @@ $(document).ready(function() {
 
 
 	// --------------- анимация switch ---------------
-	// $('.switch').on('click', animateSwitch);
+	if (navigator.userAgent.search(/[msie]\s*9.0/gi) !== -1) {
+		$('.switch').on('click', animateSwitch);
+		alert('BOOOOM')
 
-	// function animateSwitch(event) {
-	// 	var $bgElem = $(this).find('.background'),
-	// 		self = this;
+		function animateSwitch(event) {
+			var $bgElem = $(this).find('.background'),
+				self = this;
 
-	// 	if ($(this).hasClass('pause')) {
-	// 		$bgElem.animate({'left': 0}, 100, function() { $(self).removeClass('pause') });
+			if ($(this).hasClass('pause')) {
+				$bgElem.animate({'left': 0}, 200, function() { $(self).removeClass('pause') });
 
-	// 	} else if ($(this).hasClass('no')){			
-	// 		$bgElem.animate({'left': 0}, 100, function() { $(self).addClass('yes').removeClass('no') });
+			} else if ($(this).hasClass('no')){			
+				$bgElem.animate({'left': 0}, 200, function() { $(self).addClass('yes').removeClass('no') });
 
-	// 	} else if ($(this).hasClass('yes')){			
-	// 		$bgElem.animate({'left': -36}, 100, function() { $(self).addClass('no').removeClass('yes') });
-			
-	// 	} else {
-	// 		$bgElem.animate({'left': -36}, 100, function() { $(self).addClass('pause') });
-	// 	}
-	// }
+			} else if ($(this).hasClass('yes')){			
+				$bgElem.animate({'left': -36}, 200, function() { $(self).addClass('no').removeClass('yes') });
+				
+			} else {
+				$bgElem.animate({'left': -36}, 200, function() { $(self).addClass('pause') });
+			}
+		}
+	} 
 
 
 
