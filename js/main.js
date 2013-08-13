@@ -52,7 +52,6 @@ $(document).ready(function() {
 	// --------------- анимация switch ---------------
 	if (navigator.userAgent.search(/[msie]\s*9.0/gi) !== -1) {
 		$('.switch').on('click', animateSwitch);
-		alert('BOOOOM')
 
 		function animateSwitch(event) {
 			var $bgElem = $(this).find('.background'),
