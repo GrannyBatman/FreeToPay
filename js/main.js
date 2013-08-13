@@ -49,6 +49,29 @@ $(document).ready(function() {
 
 
 
+	// --------------- анимация switch ---------------
+	// $('.switch').on('click', animateSwitch);
+
+	// function animateSwitch(event) {
+	// 	var $bgElem = $(this).find('.background'),
+	// 		self = this;
+
+	// 	if ($(this).hasClass('pause')) {
+	// 		$bgElem.animate({'left': 0}, 100, function() { $(self).removeClass('pause') });
+
+	// 	} else if ($(this).hasClass('no')){			
+	// 		$bgElem.animate({'left': 0}, 100, function() { $(self).addClass('yes').removeClass('no') });
+
+	// 	} else if ($(this).hasClass('yes')){			
+	// 		$bgElem.animate({'left': -36}, 100, function() { $(self).addClass('no').removeClass('yes') });
+			
+	// 	} else {
+	// 		$bgElem.animate({'left': -36}, 100, function() { $(self).addClass('pause') });
+	// 	}
+	// }
+
+
+
 	// --------------- Выпадающий список ---------------
 	$('.drop-list-btn').on('click', showList);
 	$('.mCSB_scrollTools').on('click', function(event) { event.stopPropagation() });
